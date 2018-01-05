@@ -1,0 +1,252 @@
+	Session info:
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-redhat-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux Server release 6.9 (Santiago)
+
+Matrix products: default
+BLAS: /usr/lib64/R/lib/libRblas.so
+LAPACK: /usr/lib64/R/lib/libRlapack.so
+
+locale:
+[1] C
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] optparse_1.4.4     MCMCpack_1.4-0     MASS_7.3-47        coda_0.19-1       
+[5] DataCombine_0.2.21
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.13       lattice_0.20-35    dplyr_0.7.4        assertthat_0.2.0  
+ [5] grid_3.4.0         R6_2.2.2           MatrixModels_0.4-1 magrittr_1.5      
+ [9] rlang_0.1.2        SparseM_1.77       data.table_1.10.4  getopt_1.20.0     
+[13] bindrcpp_0.2       Matrix_1.2-9       glue_1.1.1         compiler_3.4.0    
+[17] pkgconfig_2.0.1    mcmc_0.9-5         bindr_0.1          quantreg_5.33     
+[21] methods_3.4.0      tibble_1.3.4      
+
+
+	Executing model script...
+
+
+	Reading in ./Processed/ExpAgenda_Processed_113.RData...
+
+
+	Fitting model with 46 topics, a kappa of 100, and delta of 1e-04...
+
+2.652128 
+next iteration 
+
+9.911883 
+next iteration 
+[1] "Switching to Optim"
+initial  value -12224.734467 
+iter  10 value -13046.889699
+iter  20 value -13246.614838
+iter  30 value -13253.033024
+final  value -13253.161008 
+converged
+
+7.439503 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11848.302898 
+iter  10 value -12462.838308
+iter  20 value -12517.072614
+iter  30 value -12520.306794
+final  value -12520.402289 
+converged
+
+3.065554 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11853.008445 
+iter  10 value -12107.917327
+iter  20 value -12175.101666
+iter  30 value -12177.641912
+iter  40 value -12177.762354
+final  value -12177.776902 
+converged
+
+1.827913 
+next iteration 
+
+1.632015 
+next iteration 
+
+0.6183382 
+next iteration 
+
+0.4317476 
+next iteration 
+
+0.3135666 
+next iteration 
+
+0.195325 
+next iteration 
+
+0.1293427 
+next iteration 
+
+0.117618 
+next iteration 
+
+0.0693103 
+next iteration 
+
+0.06725578 
+next iteration 
+
+0.07662058 
+next iteration 
+
+0.08177331 
+next iteration 
+
+0.08974446 
+next iteration 
+
+0.08492988 
+next iteration 
+
+0.04835185 
+next iteration 
+
+0.04710984 
+next iteration 
+
+0.03429933 
+next iteration 
+
+0.02712324 
+next iteration 
+
+0.03190626 
+next iteration 
+
+0.02046165 
+next iteration 
+
+0.02295882 
+next iteration 
+
+0.02346904 
+next iteration 
+
+0.03682544 
+next iteration 
+
+0.03225505 
+next iteration 
+
+0.02025442 
+next iteration 
+
+0.0177107 
+next iteration 
+
+0.02127422 
+next iteration 
+
+0.0232792 
+next iteration 
+
+0.01968305 
+next iteration 
+
+0.01091563 
+next iteration 
+
+0.007283443 
+next iteration 
+
+0.007330733 
+next iteration 
+
+0.009706753 
+next iteration 
+
+0.005639619 
+next iteration 
+
+0.002306909 
+next iteration 
+
+0.003510737 
+next iteration 
+
+0.00266717 
+next iteration 
+
+0.002300581 
+next iteration 
+
+0.005566917 
+next iteration 
+
+0.001698673 
+next iteration 
+
+0.001367544 
+next iteration 
+
+0.001444961 
+next iteration 
+
+0.001464119 
+next iteration 
+
+0.000982127 
+next iteration 
+
+0.001261065 
+next iteration 
+
+0.001792783 
+next iteration 
+
+0.00114878 
+next iteration 
+
+0.003003942 
+next iteration 
+
+0.001419449 
+next iteration 
+
+0.001112057 
+next iteration 
+
+0.000767254 
+next iteration 
+
+0.0004563927 
+next iteration 
+
+0.0003580704 
+next iteration 
+
+0.0002016206 
+next iteration 
+
+0.0001381706 
+next iteration 
+
+0.0002355527 
+next iteration 
+
+0.0003146203 
+next iteration 
+
+0.0002016579 
+next iteration 
+
+7.443364e-05 
+next iteration 
+
+
+	Saving output to ./Fits/113/modelfit_46_113.RData...
+
+
+	DONE!!

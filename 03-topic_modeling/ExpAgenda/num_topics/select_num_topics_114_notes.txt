@@ -1,0 +1,457 @@
+# AUTHOR: RBM
+# DATE CREATED: 10/24/2017
+# DATE LAST MODIFIED: 10/24/2017
+# FILE: "~/03-topic_modeling/ExpAgenda/num_topics/select_num_topics_114_notes.txt"
+# 
+# PURPOSE: Document process of choosing an appropriate number of topics to fit
+#			for the 114th Congress. Possible number of topics range from 30-60.
+#
+# EDITS:
+#
+# NOTES: 
+#
+#
+
+###############################################################################
+
+
+
+########################
+### 1) EVALUATING K = [30,31,...,60]
+########################
+
+
+Work outside in from both sides until a model is found that satisfies the 
+standard set by Quinn et al. (2010) - i.e., topics generally correspond to 
+areas of government. Also want to see some of the important categories from 
+Grimmer (2013) - e.g., local services funding, salient issues of debate.
+
+
+##############
+## 30 Topics:
+
+- Generally good coverage of agencies/issues:
+	- E.g., Energy, human trafficking, student loans, guns, water, jobs, VA,
+		education, drugs, judicial, small businesss, consumer protection, 
+		health care, fire dept grants, Iran deal, defense, zika, homeland 
+		security, taxes, budget, trade, EPA
+		
+- Still missing some important topics/agencies:
+	- E.g., banking, transportation, agriculture, civil rights, 
+		sexual/domestic violence, FEMA, rememberance,
+		HUD, immigration, children
+		
+- Based on high prob docs, topics appear to be too broad 
+
+- Conclusion: Too few topics
+
+
+##############
+## 60 Topics:
+
+- Has what is missing from the model w/ 30 topics:
+	- E.g., banking (4), agriculture (7), sexual/domestic violence (15), 
+		immigration (35), FEMA (52)
+		
+- Some duplicated topics, or strangely mixed:
+	- E.g., women health care (25) and planned parenthood (58); human 
+		trafficking mixed with zika (45); academy nominations and 
+		guantanamo (57)
+	
+- Conclusion: too many topics
+
+
+##############
+## 31 Topics:
+
+- Banking/finance (4) and rememberance (13) topics appeared
+	- both are too broad though - banking includes consumer protection
+	
+- Still missing lots of the important topics (see notes for model w/ K=30)
+
+- Conclusion: Too few topics
+
+
+##############
+## 59 Topics:
+
+- Still contains very fine grained topics:
+	- E.g., Train safety (18); human rights in Cuba (19)
+
+- Other strange mixes that appeared in K=60 are still there
+	
+- Conclusion: too many topics
+
+
+##############
+## 32 Topics:
+
+- Sexual/domestic violence (2) and agriculture (17) topic appeared
+	
+- Still missing lots of the important topics (see notes for model w/ K=30)
+
+- Conclusion: Too few topics
+
+
+##############
+## 58 Topics:
+
+- A topic surrounding Syria incl. refugees and terrorism emerged (44)
+
+- Academy nominations and guantanamo (57), human trafficking and zika (45), and 
+	religious freedom and retirement (58) are mixed 
+	
+- Local services split into two topics (34 & 36)
+
+- Conclusion: too many topics
+
+
+##############
+## 33 Topics:
+
+- EPA split into water (3), great lakes restoration (7), and EPA (30)
+
+- Zika topic (23) started to appear, but mixed with other issues
+
+- Lost agriculture and banking/finance
+
+- Conclusion: Too few topics
+
+
+##############
+## 57 Topics:
+
+- Religious freedom topic disappeared
+
+- Otherwise, same issues as K=58
+	
+- Conclusion: too many topics
+
+
+##############
+## 34 Topics:
+
+- Consumer protection (4) is back; Hillary Clinton investigation topic 
+	appeared; zika mixed with budgeting (28); children topic emerged
+	
+- Still missing important topics that haven't appeared or disappeared:
+	- E.g., agriculture and banking/finance
+
+- Conclusion: Too few topics
+
+
+##############
+## 56 Topics:
+
+- Academy nominations grouped into an education topic, guantanamo gone
+
+- Same issues with splits and specificity from larger K models remain
+	
+- Conclusion: too many topics
+
+
+##############
+## 35 Topics:
+
+- Human trafficking (19) split into its own more cohesive topic
+
+- National parks mixed with rememberance (13) topic
+	
+- Still missing lots of the important topics (see notes for model w/ K=30)
+	- E.g., banking/finance, agriculture, housing/HUD, FEMA
+
+- Conclusion: Too few topics
+
+
+##############
+## 55 Topics:
+
+- Civil rights mixed w/ human rights in Cuba (19); human trafficking mixed w/ 
+	zika (45); "work" (39) separate from employment (8);
+	
+- Same issues with splits and specificity from larger K models remain
+	
+- Conclusion: too many topics
+
+
+##############
+## 36 Topics:
+
+- National parks/lands (13) topic distinct from rememberance (33);
+	immigration (35) appeared
+	
+- Still missing lots of the important topics (see notes for model w/ K=30)
+	- E.g., banking/finance, HUD, FEMA, agriculture
+
+- Conclusion: Too few topics
+
+
+##############
+## 54 Topics:
+
+- Consumer protection w.r.t. food gone, concentrated on finance (17); food 
+	protections associated w/ chemicals and FDA now (41)
+
+- Same issues with splits and specificity from larger K models remain
+	
+- Conclusion: Too many topics
+
+
+##############
+## 37 Topics:
+
+- Presidential topic (37) appeared 
+	
+- Still missing a number of the important topics (see notes for model w/ K=30)
+
+- Conclusion: Too few topics
+
+
+##############
+## 53 Topics:
+
+- Academy nominations mixed w/ broad postal/rural topic (35); 
+
+- Same issues with splits and specificity from larger K models remain
+	
+- Conclusion: too many topics
+
+
+##############
+## 38 Topics:
+
+- Zika still mixed w/ budget; couple of very broad topics (24 & 38); 
+	agriculture (17) appears again
+		
+- Still no HUD, FEMA, banking/finance
+
+- Conclusion: Too few topics
+
+
+##############
+## 52 Topics:
+
+- Energy, sexual assault/violence, transportation funding, student loans,
+	manufacturing jobs, gun violence, housing/HUD, employment, education 1, 
+	drugs, judicial, national parks/lands, education 2, domestic violence, 
+	small business, consumer protection - financial, transportation 
+	safety - trains, human rights, fire dept., iran, BRAC, law enforcement, 
+	state(?), reproductive rights, airport funding/safety, taxes, budget, 
+	trade, agency oversight, veterans' health care, program funding, 
+	rememberance, academy nominations/symbolic, immigration, community mtgs, 
+	int'l sanctions - iran & nk, health care - insurance, work(?), children,
+	food, Clinton investigation, president, refugees, trafficking/zika, 
+	defense/military, research, water/epa, VRA, great lakes restoration, FEMA 
+
+- Zika mixed w/ trafficking (45); splitting sanctions and iran deal, a few 
+	general topics (look better than LDA "junk" topics, but definitely not 
+	coherent).
+		
+- Conclusion: too many topics, but closer
+
+
+##############
+## 39 Topics:
+
+- Energy, sexual assault/violence, water, consumer protection - finance, 
+	research, gun violence, great lakes restoration, employment, veterans' 
+	health care, education 1, drugs, judicial, nat'l parks/lands, student 
+	loans, Clinton investigation, small business, food/agriculture, 
+	transportation safety - trains, human trafficking, fire dept., iran deal,
+	BRAC, law enforcement, state(?), health care 1, homeland security, taxes, 
+	budget/zika, trade, epa, health care 2, program funding, rememberance, 
+	local services (?), president, symbolic or VRA(?), defense/military
+
+- Still have some distinct issues appearing as a single topic, unclear 
+	combinations; missing housing/HUD , fema, immigration
+
+- Conclusion: Too few topics, but closer
+
+
+##############
+## 51 Topics:
+
+- Same issues as K=52, but agriculture disappeared.
+		
+- Conclusion: too many topics, but very close
+
+
+##############
+## 40 Topics:
+
+- Consumer protection (17) separate from banking/finance (4); children (40) 
+	topic appeared, reproductive rights, zika, and mental health mixed (25)
+			
+- Agriculture/food is gone now.
+
+- Conclusion: Too few topics, but closer
+
+
+##############
+## 50 Topics:
+
+- Agriculture mixed in with research (47) and legislative topic (50) is 
+	confusing.
+	
+- Otherwise looks pretty good
+	
+- Conclusion: Not quite
+
+
+##############
+## 41 Topics:
+
+- Still missing agriculture and housing/HUD
+			
+- Still have some distinct issues appearing as a single topic
+
+- Conclusion: Too few topics, but close
+
+
+##############
+## 49 Topics:
+
+- Agriculture not in research (47) anymore; leg topic gone; iran deal and 
+	sanctions are separate
+	
+- Otherwise looks good
+	
+- Conclusion: CANDIDATE
+
+
+##############
+## 42 Topics:
+
+- FEMA (15) and immigration (35) appeared 
+			
+- Zika mixed with reproductive care (25), agriculture/food with consumer 
+	protection (4)
+
+- Conclusion: Too few topics, but close
+
+
+##############
+## 48 Topics:
+
+- Zika and trafficking (45) mixed; refugee/terrorism (44) topic more coherent; 
+	iran deal and sanctions (21) are one topic now; consumer protection (17) 
+	includes food and finance; housing/HUD included with program funding (11)
+
+- Conclusion: Not quite right
+
+
+
+##############
+## 43 Topics:
+
+- HUD (7), zika (12), and agriculture (16) all distinct now 
+			
+- FEMA and immigration gone
+
+- Conclusion: Too few topics, but close
+
+
+##############
+## 47 Topics:
+
+- Israel (37) topic emerged; zika and trafficking still mixed (45) 
+
+- Conclusion: Not quite 
+
+
+##############
+## 44 Topics:
+
+- Immigration (35) is back; agriculture/food mixed back in with consumer 
+	protection (17)
+
+- Conclusion: Too few topics, but close
+
+
+##############
+## 46 Topics:
+
+-  Other than zika and trafficking (45) being mixed and agriculture missing, 
+	this looks pretty good
+
+- Conclusion: CANDIDATE
+
+
+##############
+## 45 Topics:
+
+- Pretty much the same as K=46 
+
+- Conclusion: CANDIDATE
+
+
+
+
+########################
+### 2) CANDIDATES
+########################
+
+The candidates are K = 49, 46, and 45.
+
+		TOPIC OVERLAP:
+
+
+49# |	  45	|		46		|		49			|
+----|------------------------------------------------
+1	|	1		|		1		|	Energy			|
+2	|	2		|		2		|	Sex Assault		|
+3	|	3		|		3		|	Water/Lakes		|
+4	|	4		|		4		|	Student loans	|
+5	| --------	|	--------	|	Manufacturing	|
+6	|	6		|		6		|	Gun Violence	|
+7	| --------	|	--------	|	Community Serv.	|
+8	|	8		|		8		|	Employment		|
+9	| --------	|		9		|	Vet Affairs		|
+10	|	10		|		10		|	Educ. 1			|
+11	|	7		|		7		|	Program/HUD		|
+12	|	12		|		12		|	Judicial		|
+13	|	13		|		13		|	Nat'l Parks		|
+14	|	14		|		14		|	Educ. 2			|
+15	|	15?		|		15		|	Domestic Viol.	|
+16	|	16		|		16		|	Small Business	|
+17	|	17		|		17		|	Consumer Protect|
+18	|	18		|		18		|	Airports		|
+19	|	19		|		19		|	Civil Rights	|
+20	|	20		|		20		|	Fire Dept.		|
+21	|	21		|		21		|	Iran Deal		|
+22	|	22		|		22		|	BRAC			|
+23	|	23		|		23		|	Law Enforcement	|
+24	|	24		|		24		|	State(?)		|
+25	| --------	|	--------	|	Reproductive	|
+26	|	26		|		26		|	Homeland Sec.	|
+27	|	27		|		27		|	Taxes			|
+28	|	28		|		28		|	Budget			|
+29	|	29		|		29		|	Trade			|
+30	|	30		|		30		|	Agency Oversight|
+31	|	31		|		31		|	Vet Health Care |
+32	|	32		|		32		|	Project Fund	|
+33	|	33		|		33		|	Rememberance	|
+34	|	34		|		34		|	Academy Nom.	|
+35	|	35		|		35		|	Immigration		|
+36	|	36		|		36		|	Constituency 	|
+37	| --------	|	--------	|	Int'l sanctions	|
+38	|	38		|		38		|	Health Care 1	|
+39	| --------	|	--------	|	GOP work(?)		|
+40	|	40		|		40		|	Children		|
+41	| --------	|		39		|	Legislation		|
+42	|	42		|		42		|	Clinton			|
+43	|	43		|		43		|	Obama			|
+44	|	44		|		44		|	Refugee/Terror	|
+45	|	45		|		48		|	Traffic/Zika	|
+46	|	39		|		46		|	Defense/Military|
+47	|	5		|		5		|	Research		|
+48	|	11		|		11		|	Drugs			|
+49	|	41		|		41		|	EPA				|
+-----------------------------------------------------
+	|	37		|37: ISIS		|		 --------	|
+	|	25		|25: Health 2	|		 --------	|
+	|9: Banking |	 --------	|		 --------	|
+	
+	
+This makes it look like K=45 is the best bet. 
+	

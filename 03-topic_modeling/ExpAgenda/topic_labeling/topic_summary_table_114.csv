@@ -1,0 +1,46 @@
+topic,label,stems,notes,proportions
+1,localistic,"counti, state, street, feder, commun","incl. funding for local projects, meet and greets, town halls",1.23 / 1.83
+2,education - funding,"student, colleg, educ, school, program",incl. higher ed and retraining,1.78 / 1.07
+3,chemical safety bill,"safeti, chemic, state, transport, year",The Frank R. Lautenberg Chemical Safety for the 21st Century Act,1.84 / 2.36
+4,guns,"gun, violenc, firearm, law, check","incl. gun violence, trafficking, and background checks",0.93 / 2.02
+5,EPA,"epa, state, environ, mine, agenc",,1.25 / 1.62
+6,budget,"budget, year, spend, debt, congress",incl. spending bill and program funding,1.84 / 2.42
+7,nat'l issues - general,"state, unit, refug, nation, year","incl. PPACA, int'l relations, opioids, symbolic",4.32 / 1.66
+8,Iran deal,"iran, nuclear, agreement, deal, sanction",incl. N. Korea,2.77 / 2.71
+9,immigration,"immigr, law, state, enforc, illeg","incl. sanctuary cities, refugees in US and EU",1.25 / 2.65
+10,FCC,"internet, servic, religi, freedom, govern","incl. honor-nonmilitary, constituency work, meetings, community services, PO naming",0.77 / 2.69
+11,airport funding/safety,"airport, fund, feder, faa, aviat",,1.57 / 1.03
+12,HUD/HHS,"hous, fund, program, lead, famili","incl. funding, regulation",1.16 / 1.03
+13,health care,"health, care, servic, provid, act","incl. PPACA, medicaid/are, planned parenthood, awareness, rural care",4.7 / 2.27
+14,VA,"veteran, care, servic, health, program","incl. health care, services, and benefits",4.21 / 1.43
+15,oil and gas,"oil, crude, safeti, pipelin, rail","incl. Deepwater Horizon anniversary, oil train derailments, fracking ",0.82 / 1.43
+16,banking/finance,"bank, export, busi, import, financ",incl. regulation and import-export bank,0.84 / 1.35
+17,terrorism,"terrorist, attack, state, detain, guantanamo",incl. rememberance-military and Guantanamo,2.08 / 2.9
+18,symbolic ,"nation, american, honor, year, famili","incl. rememberance, holidays, accepting leadership positions, commemorating buildings/parks",5 / 5.95
+19,research,"research, nation, univ, fund, develop","incl. funding, disease, cancer, defense",2.04 / 2.33
+20,sexual/domestic violence,"sexual, violenc, assault, victim, domest",incl. universities and military,0.87 / 1.16
+21,consumer protection,"consum, protect, product, compani, inform","incl. automotive, finance, FCC, and food",2.02 / 3.2
+22,EMS funding,"fire, depart, firefight, grant, fund","incl. fire dept., first responders",1.94 / 0.8
+23,small business,"busi, small, help, act, job","incl. jobs, PPACA, regulation, and honor",1.51 / 0.97
+24,trade,"trade, american, worker, agreement, state",incl. steel and manufacturing,1.91 / 2.27
+25,jobs,"employ, worker, job, work, manufactur","incl. worker protections, job creation",2.45 / 2.1
+26,education - k12,"school, educ, student, state, program","incl. no child left behind, testing, school choice",2.55 / 1.66
+27,legislation,"act, legisl, feder, law, american","incl. bill introduction, (co)sponsorship",4.65 / 2.21
+28,defense,"forc, nation, defen, air, militari","incl. rememberance, funding, bases, Afghanistan, Syria, veterans",3.95 / 2.71
+29,judicial,"nomin, court, presid, judg, suprem","incl. Garland, appointments, rulings",2.17 / 2.99
+30,president,"presid, american, peopl, obama, state","incl. state of union, admin budget, Iran, foreign relations",4.29 / 10.66
+31,nat'l parks/lands,"lake, land, great, nation, protect","incl. agriculture, outdoor recreation, dept. of interior",2.04 / 2.25
+32,infrastructure,"water, state, fund, commun, project","incl. transportation, hurricane Sandy, WOTUS, drinking water",1.35 / 0.72
+33,drugs,"drug, opioid, addict, prescript, abus",incl. opioids and prices,2.92 / 2.65
+34,agency oversight,"rule, regul, state, feder, water","incl. hearings, investigations, reaction to executive actions",1.85 / 2.44
+35,pork spending,"fund, project, million, feder, program",,4.39 / 1.56
+36,rural services,"program, commun, support, fund, help","incl. internet, hospitals/health care, land regulations",3.96 / 1.33
+37,law enforcement,"offic, polic, law, enforc, commun","incl. funding, rememberance, honor, benefits, shootings (by and of)",2.19 / 1.37
+38,investigations,"depart, report, gener, state, letter","incl. Hillary Clinton, use of funds",2.89 / 5.15
+39,student loans,"student, loan, colleg, program, educ",,0.58 / 0.97
+40,homeland security,"secur, nation, homeland, inform, feder","incl. cyber security, ISIS/terrorism",2.56 / 1.94
+41,children,"traffick, human, victim, sex, state","incl. trafficking, sex crimes, protection, human rights",0.95 / 1.79
+42,taxes,"tax, credit, year, famili, act",,1.6 / 1.33
+43,energy,"energi, state, nation, help, develop","incl. subsidies, funding for tech, clean/renewable sources",2.23 / 1.2
+44,zika,"zika, viru, fund, health, state","incl. funding, health care",0.98 / 1.83
+45,climate change,"climat, chang, state, clean, carbon","incl. clean energy, carbon emissions, land conservation",0.78 / 2

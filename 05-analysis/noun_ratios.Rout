@@ -1,0 +1,60 @@
+	Session info:
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 16299)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] optparse_1.4.4 stringr_1.2.0 
+
+loaded via a namespace (and not attached):
+[1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    getopt_1.20.0  stringi_1.1.5 
+[6] methods_3.4.0 
+
+Reading in D:/cong_text/final_pos/topic_lemtag_merged_114.csv...
+Counting nouns...
+* * * * * * * * * * * * * * *		PERFORMING T-TESTS		* * * * * * * * * * * * * * *
+
+All nouns t-test:
+	Welch Two Sample t-test
+
+data:  r.allnn and d.allnn
+t = -34.478, df = 44034, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0.01
+95 percent confidence interval:
+ -0.004012002 -0.002504560
+sample estimates:
+mean of x mean of y 
+0.3649251 0.3681834 
+
+
+
+No proper nouns t-test:
+	Welch Two Sample t-test
+
+data:  r.noprop and d.noprop
+t = -49.35, df = 45905, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0.01
+95 percent confidence interval:
+ -0.007513528 -0.006175523
+sample estimates:
+mean of x mean of y 
+0.2146437 0.2214882 
+
+
+
+Saving t-test results...
+
+
+	DONE!!
