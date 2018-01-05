@@ -1,0 +1,5 @@
+*.7z
+*.zip
+02-pos_tagging/examples/
+02-pos_tagging/bilstm_char/data/
+02-pos_tagging/bilstm_char/results/
