@@ -2,7 +2,7 @@
 
 ## Based on [this repo](https://github.com/guillaumegenthial/sequence_tagging) and [blog post](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html). 
 
-## See the ``original_ner_README.md'' document to see the documentation for that project.
+## See the ``original_ner_README.md`` document to see the documentation for that project.
 
 ----
 
@@ -52,7 +52,7 @@ For this example model, I use the Penn Treebank WSJ sample available in the NLTK
 First, write out the PTB WSJ sample data in a CONLL format:
 ```
 python nltk2conll.py
-'''
+```
 
 Then build vocab from the data and extract trimmed glove vectors according to the configuration in `config.py`.
 
