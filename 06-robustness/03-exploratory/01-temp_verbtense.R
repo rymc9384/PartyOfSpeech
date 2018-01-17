@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 11/30/2017
-## Date Last Modified: 12/07/2017
+## Date Last Modified: 01/17/2018
 ## File: "~/06-robustness/03-exploatory/01-temp_verbtense.R"
 
 ## Purpose: 
@@ -8,6 +8,7 @@
 ##
 
 ## Edits:
+##       01/17/18) Update directory w/ "PartyOfSpeech" folder (from github upload).
 ##      
 ##        
 
@@ -28,7 +29,7 @@ library(stringr)
 options(stringsAsFactors = F)
 
 
-source("D:/Dropbox/Dissertation/02-pos_senate/01-code/06-robustness/utils_fw.R")
+source("D:/Dropbox/Dissertation/02-pos_senate/01-code/PartyOfSpeech/06-robustness/utils_fw.R")
 
 
 ## Regex expressions:
