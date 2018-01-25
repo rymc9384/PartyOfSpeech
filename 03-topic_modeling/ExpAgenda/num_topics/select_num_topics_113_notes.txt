@@ -1,0 +1,447 @@
+# AUTHOR: RBM
+# DATE CREATED: 01/24/2018
+# DATE LAST MODIFIED: 01/24/2018
+# FILE: "~/03-topic_modeling/ExpAgenda/num_topics/select_num_topics_113_notes.txt"
+# 
+# PURPOSE: Document process of choosing an appropriate number of topics to fit
+#			for the 113th Congress. Possible number of topics range from 30-60.
+#
+# EDITS:
+#
+# NOTES: 
+#
+#
+
+###############################################################################
+
+
+
+########################
+### 1) EVALUATING K = [30,31,...,60]
+########################
+
+
+Work outside in from both sides until a model is found that satisfies the 
+standard set by Quinn et al. (2010) - i.e., topics generally correspond to 
+areas of government. Also want to see some of the important categories from 
+Grimmer (2013) - e.g., local services funding, salient issues of debate.
+
+
+##############
+## 30 Topics:
+
+- Generally good coverage of agencies/issues:
+	- E.g., taxes, immigration, FEMA, funding, trade, education, VA, 
+		business, grants (firefighting), agriculture, drugs, int'l relations, 
+		water, air travel, military, nat'l lands, judicial, gun violence,
+		children 
+		
+- Still missing some important topics/agencies:
+	- E.g., HUD/HHS, consumer protection, banking/finance, transportation 
+	
+- Topics too broad based on doc samples -- e.g., defense and sexual/domestic 
+  violence mixed (1)
+
+- Conclusion: Too few topics
+
+
+##############
+## 60 Topics:
+
+- Mental health, PPACA, taxes, drugs, Superstorm Sandy, invasive fish, EOE, wildfires, 
+	oil pipline, academy nominations, minimum wage, VA, small business, 
+	grants (firefighting), agriculture, jobs, iran, water, air travel, transportation, 
+	corp of engineers, FEMA, education, funding, fisheries, defense, research, gun violence,
+	education (k12), children, BRAC, trade, manufacturing, judicial, student loans, 
+	surveillance, health care, programs (fam + children), law enforcement, flood insurance, 
+	education, investigation, health care, families, consumer protection (finance), 
+	nat'l lands, Ukraine/Russia, budget, human/civil rights, immigration, trade (steel), 
+	worker training, homeland sec., econ. development, agency rules, constitutional amendments,
+	gov't accountability office, sexual/domestic violence, winter heat funding, local meetings
+	
+		
+- Some duplicated and overly specific topics:
+	- E.g., multiple fish related topics (6,25), winter heat assistance program(59), 
+	constitutional amendments(56), corp of engineers (21) and FEMA (22) 
+	
+- Conclusion: too many topics
+
+
+##############
+## 31 Topics:
+
+- Jobs appear as dominant stems (7), consumer protection and finance appear 
+	as single topic (23)
+	
+- defense only appears w/ sexual/domestic violence, other combos too broad (e.g., ^), 
+	still missing important topics (e.g., law enforcement)
+
+- Conclusion: Too few topics
+
+
+##############
+## 59 Topics:
+
+- Food/SNAP (1) and farming (15) separated, fish topics collapsed (25), too many 
+	health care topics (2,27,37,43)
+	
+- Conclusion: Too many topics
+
+
+##############
+## 32 Topics:
+
+- corp of engineers mixed w/ oil pipeline (21), BRAC appears (23), VRA more defined (25),
+	banking/finance still mixed w/ consumer protection (32)
+
+- Conclusion: Too few topics
+
+
+##############
+## 58 Topics:
+
+- Fish topics split again (6,25), rememberance appears (16), sexual/domestic violence and guns and 
+	trafficking mixed (28), air travel appears twice (19,54), surveillance replaced by FCC
+
+- Conclusion: too many topics
+
+
+##############
+## 33 Topics:
+
+- defense mixed w/ BRAC (23), still missing law enforcement, Iran and Ukraine/Russia mixed (17),
+	drugs and climate change mixed (11)
+
+- Conclusion: Too few topics
+
+
+##############
+## 57 Topics:
+
+- sexual/domestic violence (1) distinct from military -- mixed w/ trafficking instead;
+	two fish topics (6,25), honorific topic appears (10), consumer protection mixed w/ 
+	FCC and surveillance (36), air travel in two topics (19,54)
+	
+- Conclusion: Too many topics
+
+
+##############
+## 34 Topics:
+
+- climate change topic (11) is distinct from drugs (8), VRA topic (25) appears
+
+- still missing law enforcement, distinct defense and BRAC topics, 
+
+- Conclusion: Too few topics
+
+
+##############
+## 56 Topics:
+
+- issues similar to larger K models
+
+- Keystone XL (11) reappears, constitutional amendments (56) reappear, 
+	still have asian carp topic (21)
+	
+- Conclusion: too many topics
+
+
+##############
+## 35 Topics:
+
+- infrastructure mixed w/ Keystone XL (9), gun violence (28) appears 
+	
+- social security and homeland mixed (26), beginnings of law enforcement 
+	appear in gun topic (28)
+
+- Conclusion: Too few topics
+
+
+##############
+## 55 Topics:
+
+- issues similar to larger K models
+
+- marriage equality (55) appears, native Hawaiian (25) topic
+
+- Conclusion: too many topics
+
+
+##############
+## 36 Topics:
+
+- sexual/domestic violence (w/ military), PPACA, taxes, immigration, program funding			(1-5)
+	localistic, jobs, investigation (GAO), infrastructure, workforce training,  				(6-10)
+	climate change, VA, mental health, grant (firefighting), agriculture,   					(11-15)
+	children, int'l relations, disaster (Sandy), FAA, transportation safety,					(16-20)
+	water, rememberance, BRAC, nat'l lands, VRA,												(21-25)
+	homeland security, health care (medicare), gun violence, education (k12),drugs,				(26-30)
+	judicial nominations, small business, manufacturing, budget (debt), student loans,			(31-35)
+	flood/FEMA																					(36)
+
+- law enforcement mixed w/ gun violence, defense mixed w/ other topics, 
+	consumer protection mixed w/ climate change
+
+- Conclusion: Too few topics
+
+
+##############
+## 54 Topics:
+
+- sexual/domestic violence (w/ military), PPACA, taxes, drugs, econ devolopment, 				(1-5)
+	localistic, jobs, investigation (GAO), infrastructure, academy nominations,  				(6-10)
+	minimum wages, VA, small business, grant (firefighting), agriculture,   					(11-15)
+	rememberance, Iran/mideast, surveillance, FAA, transportation safety,						(16-20)
+	water, disaster (Sandy), education (highered), program funding, Hawaiian natives,			(21-25)
+	defense, mental health, gun violence, education (k12), children,							(26-30)
+	BRAC, exports, manufacturing, constitutional amendments, student loans,						(31-35)
+	agency rules, health care (cost), investigation (cong), law enforcement, flood/FEMA,		(36-40)
+	education (primary), judicial, health care (medicare), climate change, consumer protection, (41-45)
+	nat'l lands, Ukraine/Russia, budget (debt ceiling), VRA, immigration, 						(46-50)
+	trade (steel), workforce training, homeland security, airport funding 						(51-54)
+
+- lots of health care, job, and education topics; too specific (e.g., native Hawaiians (25)) 
+	
+- Conclusion: Too many topics
+
+
+##############
+## 37 Topics:
+
+- health care providers (37) topic appears, manufacturing (33) also contains trade and steel now
+	
+- same issues of topic breadth from smaller K models
+
+- Conclusion: Too few topics
+
+
+##############
+## 53 Topics:
+
+- USPS (2) topic appears, asian carp (6) and fishing (21) are separate, 
+	disaster/FEMA (22) separate from flooding (40)
+	
+- Conclusion: Too many topics
+
+
+##############
+## 38 Topics:
+
+- econ development (2) appears; Ukraine/Russia (16) splits from Iran/mideast (17) but 
+	is now mixed w/ honorific; defense is not its own topic
+		
+- Conclusion: Too few topics
+
+
+##############
+## 52 Topics:
+
+- Still have USPS (2) topic, asian carp and fishing topics still distinct, 
+	constitutional amendment (25) reappears
+
+- closer, but not quite there
+		
+- Conclusion: Too many topics
+
+
+##############
+## 39 Topics:
+
+- family mixed w/ Ukraine/Russia topic (16) - adoption maybe?; no law enforcement,  
+	ambiguous topic (22), 
+
+- Conclusion: Too few topics
+
+
+##############
+## 51 Topics:
+
+- asian carp mixed w/ constituency work (6); Israel/Benghazi topic (8) appears, 
+	constitutional amendment (23) separate from VRA (49), Rhode Island topic (36)
+		
+- Conclusion: Too many topics
+
+
+##############
+## 40 Topics:
+
+- defense and BRAC are together (38) - not a big deal, social security and homeland are combined (26)
+
+- Conclusion: Too few topics
+
+
+##############
+## 50 Topics:
+
+- these fish will not go away (6), but no more general fishing topic; econ development and research combined (2);
+	some funding/program topics are pretty ambiguous
+	
+- Conclusion: Too many topics
+
+
+##############
+## 41 Topics:
+
+- sexual/domestic violence (w/ military), rural (postal), taxes, immigration, program funding, 	(1-5)
+	localistic, jobs, research, infrastructure, econ development,  								(6-10)
+	rules (climate change), VA, small business, grant (firefighting), agriculture,   			(11-15)
+	Ukraine/Russia, Iran/mideast, disaster (Sandy), airports, transport safety,					(16-20)
+	water, rememberance, academy nominations, nat'l lands, VRA,									(21-25)
+	homeland sec., PPACA, gun violence, program funding (family), drugs,						(26-30)
+	judicial, banking/finance, manufacturing/trade, budget (debt ceiling), student loans,		(31-35)
+	Keystone XL, children, defense/military, investigation/reports, flood (insurance),			(36-40)
+	education (general)																			(41)
+	
+- No law enforcement topic
+	
+- Conclusion: close, but too few 
+
+
+##############
+## 49 Topics:
+
+- sexual/domestic violence (w/ military), econ develop (research), taxes, drugs, program funding, 	(1-5)
+	local/carp fish, immigration, defense, infrastructure, workforce training,						(6-10)
+	hobs, VA, small business, grants (firefighting), agriculture,									(11-15)
+	families/children, Iran/mideast, water, air travel, transport safety,							(16-20)
+	Keystone XL, disaster (Sandy), academy nominations, program funding (large), VRA,				(21-25)
+	homeland/social sec., mental health, gun violence, education (k12), children,					(26-30)
+	BRAC, banking/finance, manufacturing, budget (debt), student loans, 							(31-35)
+	law enforcement, PPACA, reports, court rulings, flood/FEMA, 									(36-40)
+	education (highered), judicial nominations, health care (medicare), rememberance(?), FCC/CPA, 	(41-45)
+	nat'l lands, Ukraine/Russia, localistic, trade (steel)										 	(46-49)
+	
+- weird topic mixes and ambiguous topics
+	
+- Conclusion: Too many topics
+
+
+##############
+## 42 Topics:
+
+- research (8) now distinct from econ development (10); academy nominations mixed w/ education (23);
+	distinct BRAC (31) and defense (38) topics; law enforcement topic missing
+
+- Conclusion: Too few topics
+
+
+##############
+## 48 Topics:
+
+- asian carp (6), water (18), and fisheries (21) all distinct; 
+	separate topics for VRA (25) and other court decisions (39)
+
+- Conclusion: Close, but too many topics 
+
+
+
+##############
+## 43 Topics:
+
+- Homeland and social sec. mixed (26); banking/finance and consumer protection mixed (32); 
+	law enforcement missing; 
+
+- Conclusion: Almost there, too few
+
+
+##############
+## 47 Topics:
+
+- fisheries topic gone (mixed w/ asian carp?); surveillance and court decisions mixed (39)
+
+- Conclusion: Close, but too many topics 
+
+
+##############
+## 44 Topics:
+
+- academy nominations mixed w/ education (23); law enforcement (36) appears; 
+	trade (32) and manufacturing (33) now separate topics; 
+
+- Conclusion: CANDIDATE
+
+
+##############
+## 46 Topics:
+
+-  historic preservation (24) split from nat'l lands (46)
+
+- Conclusion: CANDIDATE
+
+
+##############
+## 45 Topics:
+
+- homeland and social sec. mixed (26); banking/finance mixed w/ consumer protection (45)
+
+- Conclusion: CANDIDATE
+
+
+
+
+########################
+### 2) CANDIDATES
+########################
+
+The candidates are K = 44, 45, & 46.
+
+		TOPIC OVERLAP:
+
+
+46# |	44#			|		45#		|	  46 label		|
+----|---------------|---------------|---------------------
+1	|	1			|		1		|	Sex Assault		|
+2	|	2			|		2		|	Rural			|
+3	|	3			|		3		|	Taxes			|
+4	|	4			|		4		|	Immigration		|
+5	| 	5			|		5		|	Funding (lrg)	|
+6	|	6			|		6		|	Constituency	|
+7	| 	7			|		7		|	Employment		|
+8	|	8			|		8		|	Defense/Military|
+9	| 	9			|		9		|	Keystone XL		|
+10	|	10			|		10		|	Econ Development|
+11	|	11			|		11		|	Climate Change	|
+12	|	12			|		12		|	Veterans		|
+13	|	13			|		13		|	Small Business	|
+14	|	14			|		14		|	Grants (fire)	|
+15	|	15			|		15		|	Agriculture		|
+16	|	16			|		16		|	Ukraine/Russia	|
+17	|	17			|		17		|	Iran/Mideast	|
+18	|	22			|		22		|	Disaster (Sandy)|
+19	|	19			|		19		|	Airport			|
+20	|	20			|		20		|	Transport Safety|
+21	|	18			|		18		|	Water (protect)	|
+22	| --------		|	 --------	|	Fisheries		|
+23	|	23			|		23		|	Academy Noms	|
+24	| --------		|	 --------	|	Parks/Historic	|
+25	|	25			|		25		|	Vote Rights Act	|
+26	|	26			|		26		|	DHS/Social Sec.	|
+27	|	27			|		27		|	Healthcare (gen)|
+28	|	28			|		28		|	Gun Violence	|
+29	| --------		|	 --------	|	Education (k12)	|
+30	|	30			|		30		|	Drugs 			|
+31	|	31			|		31		|	BRAC			|
+32	| --------		|		32		|	Trade			|
+33	| --------		|		33		|	Manufacturing	|
+34	|	34			|		34		|	Budget (debt)	|
+35	|	35			|		35		|	Student Loans	|
+36	|	36			|		36		|	Law Enforcement	|
+37	| 	37			|		37		|	PPACA			|
+38	|	38			|		38		|	Welfare Program	|
+39	| --------		|	 --------	|	Surveillance	|
+40	|	40			|		40		|	Floods (FEMA)	|
+41	| 	41			|		41		|	Education (gen)	|
+42	|	42			|		42		|	Judicial Noms	|
+43	|	29			|		29		|	Children		|
+44	|	44			|		44		|	Rememberance	|
+45	|	32			|		45		|	Consumer/Bank	|
+46	|	24			|		24		|	Nat'l Lands		|
+----------------------------------------------------------
+	|43: Medicare	|43: Medicare	|	  --------		|
+	|39: Reports	|39: Reports	|	  --------		|
+	|33: Manu/trade	|21: Lakes/Carp	|	  --------		|
+	|21: Lakes/Carp	|	 --------	|	  --------		|
+	
+
+This makes it look like K=45 is the best bet, again. 
+	

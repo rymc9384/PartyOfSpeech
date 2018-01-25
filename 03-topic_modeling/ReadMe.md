@@ -160,8 +160,8 @@ qsub replication_runs_45_114.pbs
 
 You can check the job array progress with the following command:
 ```
-qstat -u <YOUR ID> # this is to get the $JOBID
-qstat -t $JOBID[]
+qstat -u <YOUR ID>   # this is to get the $JOBID
+qstat -t [$JOBID][]  # e.g., qstat -t 5012081[]
 ```
 
 
