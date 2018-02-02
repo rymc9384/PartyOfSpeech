@@ -1,0 +1,270 @@
+	Session info:
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-redhat-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux Server release 6.9 (Santiago)
+
+Matrix products: default
+BLAS: /usr/lib64/R/lib/libRblas.so
+LAPACK: /usr/lib64/R/lib/libRlapack.so
+
+locale:
+[1] C
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] optparse_1.4.4     MCMCpack_1.4-0     MASS_7.3-47        coda_0.19-1       
+[5] DataCombine_0.2.21
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.13       lattice_0.20-35    dplyr_0.7.4        assertthat_0.2.0  
+ [5] grid_3.4.0         R6_2.2.2           MatrixModels_0.4-1 magrittr_1.5      
+ [9] rlang_0.1.2        SparseM_1.77       data.table_1.10.4  getopt_1.20.0     
+[13] bindrcpp_0.2       Matrix_1.2-9       glue_1.1.1         compiler_3.4.0    
+[17] pkgconfig_2.0.1    mcmc_0.9-5         bindr_0.1          quantreg_5.33     
+[21] methods_3.4.0      tibble_1.3.4      
+
+
+	Executing model script...
+
+
+	Reading in ./Processed/ExpAgenda_Processed_113.RData...
+
+
+	Fitting replication 51 with 45 topics, a kappa of 100, and delta of 1e-04...
+
+2.579566 
+next iteration 
+[1] "Switching to Optim"
+initial  value -13629.405625 
+iter  10 value -14543.418218
+iter  20 value -14586.204590
+iter  30 value -14587.895951
+final  value -14588.092095 
+converged
+
+6.115858 
+next iteration 
+[1] "Switching to Optim"
+initial  value -12086.225621 
+iter  10 value -13271.050796
+iter  20 value -13386.211807
+iter  30 value -13400.218524
+final  value -13400.357398 
+converged
+
+11.66975 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11296.550747 
+iter  10 value -12394.091648
+iter  20 value -12438.563160
+iter  30 value -12440.213487
+iter  40 value -12440.265249
+iter  40 value -12440.265274
+final  value -12440.265539 
+converged
+
+5.226061 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11357.076770 
+iter  10 value -11905.442516
+iter  20 value -11912.504990
+iter  30 value -11912.720101
+iter  30 value -11912.720202
+final  value -11912.724113 
+converged
+
+2.57835 
+next iteration 
+
+1.915876 
+next iteration 
+
+0.7483416 
+next iteration 
+
+0.3111476 
+next iteration 
+
+0.2200414 
+next iteration 
+
+0.1472034 
+next iteration 
+
+0.1136194 
+next iteration 
+
+0.115539 
+next iteration 
+
+0.1060239 
+next iteration 
+
+0.1337668 
+next iteration 
+
+0.1188686 
+next iteration 
+
+0.09135001 
+next iteration 
+
+0.06297855 
+next iteration 
+
+0.06562395 
+next iteration 
+
+0.05924482 
+next iteration 
+
+0.05862503 
+next iteration 
+
+0.0697702 
+next iteration 
+
+0.03812554 
+next iteration 
+
+0.0362103 
+next iteration 
+
+0.02943497 
+next iteration 
+
+0.02158605 
+next iteration 
+
+0.01982304 
+next iteration 
+
+0.01447718 
+next iteration 
+
+0.009900081 
+next iteration 
+
+0.02197212 
+next iteration 
+
+0.0266014 
+next iteration 
+
+0.01628946 
+next iteration 
+
+0.01178127 
+next iteration 
+
+0.01387293 
+next iteration 
+
+0.01961727 
+next iteration 
+
+0.01610782 
+next iteration 
+
+0.01426423 
+next iteration 
+
+0.01348806 
+next iteration 
+
+0.01313277 
+next iteration 
+
+0.009252816 
+next iteration 
+
+0.009364145 
+next iteration 
+
+0.008861993 
+next iteration 
+
+0.0141918 
+next iteration 
+
+0.0095945 
+next iteration 
+
+0.007544075 
+next iteration 
+
+0.00458884 
+next iteration 
+
+0.004431424 
+next iteration 
+
+0.004638044 
+next iteration 
+
+0.005393564 
+next iteration 
+
+0.002926004 
+next iteration 
+
+0.002566849 
+next iteration 
+
+0.003692591 
+next iteration 
+
+0.001678887 
+next iteration 
+
+0.0009240653 
+next iteration 
+
+0.005810422 
+next iteration 
+
+0.001960851 
+next iteration 
+
+0.001815553 
+next iteration 
+
+0.000645042 
+next iteration 
+
+0.0007716459 
+next iteration 
+
+0.0004411447 
+next iteration 
+
+0.000335927 
+next iteration 
+
+0.0004854023 
+next iteration 
+
+0.0004839615 
+next iteration 
+
+0.000220907 
+next iteration 
+
+0.0001659229 
+next iteration 
+
+0.0001018985 
+next iteration 
+
+7.093843e-05 
+next iteration 
+
+
+	Saving output to ./Replications/113/repfit_51_45_113.RData...
+
+
+	DONE!!

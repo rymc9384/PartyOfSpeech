@@ -10,7 +10,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\04-data_formatting\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\04-data_formatting\
 ```
 
 ### 3. Call python script (file locations editable in utils.py -> lemtag -> Config):
@@ -33,7 +33,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\04-data_formatting\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\04-data_formatting\
 ```
 
 ### 3. Call python script (file locations can be passed in as args):
@@ -56,7 +56,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\04-data_formatting\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\04-data_formatting\
 ```
 
 ### 3. Call python script w/ desired args:
@@ -79,7 +79,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\04-data_formatting\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\04-data_formatting\
 ```
 
 ### 3. Call python script w/ desired args:
@@ -102,7 +102,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\04-data_formatting\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\04-data_formatting\
 ```
 
 ### 3. Call python script w/ desired args:

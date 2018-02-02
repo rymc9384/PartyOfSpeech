@@ -10,7 +10,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\05-analysis\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\05-analysis\
 ```
 
 ### 3. Call python script w/ desired args:
@@ -28,7 +28,7 @@ CMD
 CMD
 ```
 > d:
-> cd Dropbox\Dissertation\02-pos_senate\01-code\05-analysis\
+> cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\05-analysis\
 ```
 
 ### 2. Call R script (change merged data location)

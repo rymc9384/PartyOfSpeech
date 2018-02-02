@@ -61,13 +61,13 @@ class topiclem:
     
     class Config:
         
-        topicfile = "D:/cong_text/csvs/topics/ExpAgenda_topics_114.csv"
+        topicfile = "D:/cong_text/csvs/topics/ExpAgenda_topics_113.csv"
         taglemfile = "D:/cong_text/csvs/tagged/lemma_merged_id.csv"
         taglemcols = ['docid', 'tagged_text', 'lemma_text']
         howmerge = 'left'
         mergeon = 'docid'
         mergeoutpath = "D:/cong_text/final_pos/"
-        mergeoutfile = "topic_lemtag_merged_114.csv"
+        mergeoutfile = "topic_lemtag_merged_113.csv"
         
         
     def loadtopiclem(topicfile, taglemfile):
@@ -300,7 +300,10 @@ class newfeatures(object):
     def replace_specific(self):
         
         for i in range(len(self._to_replace)):
-            tempidx = self._prpnum_feats.index(self._to_replace[i])
+            try:
+                tempidx = self._prpnum_feats.index(self._to_replace[i])
+            except ValueError:
+                continue
             self._prpnum_feats[tempidx] = self._replacements[i]
         
         self._full_prpnum_feats = [i for i in self._prpnum_feats]

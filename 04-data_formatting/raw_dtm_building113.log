@@ -1,0 +1,110 @@
+Reading in merged data...
+
+Removing newline symbols...
+
+Looping over individual senators...
+Getting common ngrams for alexander... 	 1/87
+Getting common ngrams for ayotte... 	 2/87
+Getting common ngrams for boxer... 	 3/87
+Getting common ngrams for brown... 	 4/87
+Getting common ngrams for burr... 	 5/87
+Getting common ngrams for cantwell... 	 6/87
+Getting common ngrams for cardin... 	 7/87
+Getting common ngrams for carper... 	 8/87
+Getting common ngrams for casey... 	 9/87
+Getting common ngrams for coats... 	 10/87
+Getting common ngrams for baldwin... 	 11/87
+Getting common ngrams for cochran... 	 12/87
+Getting common ngrams for collins... 	 13/87
+Getting common ngrams for coons... 	 14/87
+Getting common ngrams for corker... 	 15/87
+Getting common ngrams for cornyn... 	 16/87
+Getting common ngrams for crapo... 	 17/87
+Getting common ngrams for cruz... 	 18/87
+Getting common ngrams for donnelly... 	 19/87
+Getting common ngrams for barrasso... 	 20/87
+Getting common ngrams for durbin... 	 21/87
+Getting common ngrams for enzi... 	 22/87
+Getting common ngrams for feinstein... 	 23/87
+Getting common ngrams for fischer... 	 24/87
+Getting common ngrams for flake... 	 25/87
+Getting common ngrams for franken... 	 26/87
+Getting common ngrams for gillibrand... 	 27/87
+Getting common ngrams for grassley... 	 28/87
+Getting common ngrams for bennet... 	 29/87
+Getting common ngrams for hatch... 	 30/87
+Getting common ngrams for heinrich... 	 31/87
+Getting common ngrams for heitkamp... 	 32/87
+Getting common ngrams for heller... 	 33/87
+Getting common ngrams for hirono... 	 34/87
+Getting common ngrams for hoeven... 	 35/87
+Getting common ngrams for inhofe... 	 36/87
+Getting common ngrams for isakson... 	 37/87
+Getting common ngrams for kaine... 	 38/87
+Getting common ngrams for king... 	 39/87
+Getting common ngrams for billnelson... 	 40/87
+Getting common ngrams for kirk... 	 41/87
+Getting common ngrams for klobuchar... 	 42/87
+Getting common ngrams for lankford... 	 43/87
+Getting common ngrams for leahy... 	 44/87
+Getting common ngrams for lee... 	 45/87
+Getting common ngrams for lgraham... 	 46/87
+Getting common ngrams for manchin... 	 47/87
+Getting common ngrams for markey... 	 48/87
+Getting common ngrams for mccain... 	 49/87
+Getting common ngrams for mccaskill... 	 50/87
+Getting common ngrams for blumenthal... 	 51/87
+Getting common ngrams for mcconnell... 	 52/87
+Getting common ngrams for menendez... 	 53/87
+Getting common ngrams for merkley... 	 54/87
+Getting common ngrams for mikulski... 	 55/87
+Getting common ngrams for moran... 	 56/87
+Getting common ngrams for murkowski... 	 57/87
+Getting common ngrams for murphy... 	 58/87
+Getting common ngrams for murray... 	 59/87
+Getting common ngrams for blunt... 	 60/87
+Getting common ngrams for portman... 	 61/87
+Getting common ngrams for reed... 	 62/87
+Getting common ngrams for reid... 	 63/87
+Getting common ngrams for risch... 	 64/87
+Getting common ngrams for roberts... 	 65/87
+Getting common ngrams for ronjohnson... 	 66/87
+Getting common ngrams for rubio... 	 67/87
+Getting common ngrams for sanders... 	 68/87
+Getting common ngrams for booker... 	 69/87
+Getting common ngrams for schatz... 	 70/87
+Getting common ngrams for schumer... 	 71/87
+Getting common ngrams for scott... 	 72/87
+Getting common ngrams for sessions... 	 73/87
+Getting common ngrams for shaheen... 	 74/87
+Getting common ngrams for shelby... 	 75/87
+Getting common ngrams for stabenow... 	 76/87
+Getting common ngrams for tester... 	 77/87
+Getting common ngrams for boozman... 	 78/87
+Getting common ngrams for thune... 	 79/87
+Getting common ngrams for tomudall... 	 80/87
+Getting common ngrams for toomey... 	 81/87
+Getting common ngrams for vitter... 	 82/87
+Getting common ngrams for warner... 	 83/87
+Getting common ngrams for warren... 	 84/87
+Getting common ngrams for whitehouse... 	 85/87
+Getting common ngrams for wicker... 	 86/87
+Getting common ngrams for wyden... 	 87/87
+
+Getting common ngrams for all senators...
+
+Getting rare ngrams for all senators...
+
+Making senator and general common n-gram lists mutually exclusive...
+
+Making replacement features:
+	for general common n-grams...
+	for senator specific common n-grams...
+	for rare n-grams...
+
+Building full DTM...
+
+Getting tag-only feature set...
+
+Saving raw DTM and feature names...
+Done!

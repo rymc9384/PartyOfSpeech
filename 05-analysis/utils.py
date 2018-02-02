@@ -34,7 +34,8 @@ class datautils(object):
         self._countspathpattern = countspathpattern
         
         self._countsfiles = glob(countspathpattern)
-        self._topicidx = [int(re.sub("[^\d+]", '', f)) for f in self._countsfiles]
+        tmp_files = [re.sub(r".*?\\", "", f) for f in self._countsfiles]
+        self._topicidx = [int(re.sub("[^\d+]", '', f[3:])) for f in tmp_files]
         
         self._tempcountsfile = None
         self._tempcounts = None

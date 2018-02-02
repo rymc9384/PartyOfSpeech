@@ -180,3 +180,102 @@ def getc(df, feat):
     t = df.counts.sum()
     
     return(c,t)
+
+
+
+class analysisutils(object):
+    
+    def __init__(self, wordcounts=None):
+        
+        self._wordcounts = wordcounts
+        self._fwoutput = None
+        
+    
+    def fightinwords(self):
+        ###########################################################################
+        # - NOTE: Adapted from "bayes_compare_language" function by Jack Hessel, 
+        #           Dept. of Comp Sci, Cornell University. 
+        #    
+        # - PURPOSE: This is a function to estimate the zetas of 
+        #               Fightin' Words (Monroe et al. 2008), which are related to 
+        #               the differential use of words by two or more groups.
+        #
+        # - ARGUMENT(S): 1) 'words' = a vector of words associated with the counts;
+        #                2) 'counts1' = a vector of word counts by group 1;
+        #                3) 'counts2' = a vector of word counts by group 2;
+        #                4) 'priors1' = a vector of values, which essentially add 
+        #                               prior_w observations of word 'w' to the
+        #                               total observed count of word 'w' by 
+        #                               group 1.
+        #                5) 'priors2' = same as (4) but for group 2.
+        #                
+        #
+        # - OUTPUT: A pandas dataframe w/ words, zeta values, and total counts
+        #
+        ###########################################################################
+        
+        words = self._wordcounts.words
+        counts1 = self._wordcounts.counts1
+        counts2 = self._wordcounts.counts2
+        priors1 = self._wordcounts.priors1
+        priors2 = self._wordcounts.priors2
+        
+        # Make sure everything is a list:
+        if type(words) != list:
+            words = list(words)
+        if type(counts1) != list:
+            counts1 = list(counts1)
+        if type(counts2) != list:
+            counts2 = list(counts2)
+        if type(priors1) != list:
+            priors1 = list(priors1)
+        if type(priors2) != list:
+            priors2 = list(priors2)
+        
+        # Sum of priors (alpha_0) by party
+        a01 = np.sum(priors1)
+        a02 = np.sum(priors2)
+        n1 = np.sum(counts1) 
+        n2 = np.sum(counts2)
+        
+        # compute delta
+        term1 = np.log( np.add(counts1, priors1) /(n1 + a01 - np.add(counts1, priors1)))
+        term2 = np.log( np.add(counts2, priors2) /(n2 + a02 - np.add(counts2, priors2)))
+        
+        delta = np.subtract(term1,term2)
+            
+        # compute variance on delta
+        var = np.add( 1 / np.add(counts1, priors1), 1 / np.add(counts2, priors2) )
+        
+        # list of zetas (positive zetas indicate the word is associated w/ group1)
+        z_scores = list(np.divide(delta, np.sqrt(var)))
+            
+        # store total count:
+        full_counts = list(np.add(counts1, counts2))
+            
+        # Put into data frame:
+        rows = [[row[0], row[1], row[2], row[3]] for row in zip(words,z_scores,delta,full_counts)]
+        out = pd.DataFrame(rows)
+        out.columns = ['word','zeta','delta','count']
+        
+        self._fwoutput = out
+        
+        
+    def get_top_features(self, n=15):
+        """
+        Get output for `n` features most strongly associated with each group
+        """
+        
+        tmp_df = self._fwoutput.sort_values('zeta', ascending=False)
+        
+        self._topn_gop = tmp_df.head(n=n)
+        self._topn_dem = tmp_df.tail(n=n)
+        print("Top {} Group 1 Features:".format(n))
+        print(self._topn_gop)
+        print("\nTop {} Group 2 Features:".format(n))
+        print(self._topn_dem)
+    
+    
+    def get_word(self, word):
+        
+        return self._fwoutput[self._fwoutput.word == word]

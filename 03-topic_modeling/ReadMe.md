@@ -175,7 +175,7 @@ qstat -t [$JOBID][]  # e.g., qstat -t 5012081[]
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 3. Call script evaluation script with desired arguments:
@@ -192,7 +192,7 @@ CMD
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 2. Call script evaluation script with desired arguments:
@@ -211,7 +211,7 @@ CMD
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 2. Call script evaluation script with desired arguments:

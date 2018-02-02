@@ -1,0 +1,272 @@
+	Session info:
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-redhat-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux Server release 6.8 (Santiago)
+
+Matrix products: default
+BLAS: /usr/lib64/R/lib/libRblas.so
+LAPACK: /usr/lib64/R/lib/libRlapack.so
+
+locale:
+[1] C
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] optparse_1.4.4     MCMCpack_1.4-0     MASS_7.3-47        coda_0.19-1       
+[5] DataCombine_0.2.21
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_0.12.13       lattice_0.20-35    dplyr_0.7.4        assertthat_0.2.0  
+ [5] grid_3.4.0         R6_2.2.2           MatrixModels_0.4-1 magrittr_1.5      
+ [9] rlang_0.1.2        SparseM_1.77       data.table_1.10.4  getopt_1.20.0     
+[13] bindrcpp_0.2       Matrix_1.2-9       glue_1.1.1         compiler_3.4.0    
+[17] pkgconfig_2.0.1    mcmc_0.9-5         bindr_0.1          quantreg_5.33     
+[21] methods_3.4.0      tibble_1.3.4      
+
+
+	Executing model script...
+
+
+	Reading in ./Processed/ExpAgenda_Processed_113.RData...
+
+
+	Fitting replication 64 with 45 topics, a kappa of 100, and delta of 1e-04...
+
+2.578757 
+next iteration 
+
+10.11464 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11993.861241 
+iter  10 value -12795.427604
+iter  20 value -12846.851198
+iter  30 value -12849.504495
+final  value -12849.530770 
+converged
+
+6.938831 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11314.569763 
+iter  10 value -12028.434253
+iter  20 value -12058.520732
+iter  30 value -12068.035463
+final  value -12068.110803 
+converged
+
+4.739088 
+next iteration 
+[1] "Switching to Optim"
+initial  value -11346.000848 
+iter  10 value -11700.549791
+iter  20 value -11711.198822
+iter  30 value -11712.492784
+final  value -11712.558590 
+converged
+
+1.828472 
+next iteration 
+
+1.364912 
+next iteration 
+
+0.5125801 
+next iteration 
+
+0.2441503 
+next iteration 
+
+0.1287406 
+next iteration 
+
+0.09983109 
+next iteration 
+
+0.06867227 
+next iteration 
+
+0.06503064 
+next iteration 
+
+0.06272952 
+next iteration 
+
+0.03503271 
+next iteration 
+
+0.05578422 
+next iteration 
+
+0.1002072 
+next iteration 
+
+0.1282799 
+next iteration 
+
+0.1246422 
+next iteration 
+
+0.06995453 
+next iteration 
+
+0.05776232 
+next iteration 
+
+0.054146 
+next iteration 
+
+0.04172078 
+next iteration 
+
+0.06143138 
+next iteration 
+
+0.0509248 
+next iteration 
+
+0.02128643 
+next iteration 
+
+0.01428393 
+next iteration 
+
+0.01422424 
+next iteration 
+
+0.01409849 
+next iteration 
+
+0.008446279 
+next iteration 
+
+0.007405406 
+next iteration 
+
+0.01183045 
+next iteration 
+
+0.008910923 
+next iteration 
+
+0.003978294 
+next iteration 
+
+0.002939405 
+next iteration 
+
+0.004191271 
+next iteration 
+
+0.001872694 
+next iteration 
+
+0.001391074 
+next iteration 
+
+0.001948817 
+next iteration 
+
+0.001530504 
+next iteration 
+
+0.002400219 
+next iteration 
+
+0.001628284 
+next iteration 
+
+0.00156668 
+next iteration 
+
+0.001196826 
+next iteration 
+
+0.000986571 
+next iteration 
+
+0.0008682228 
+next iteration 
+
+0.0004905183 
+next iteration 
+
+0.0002538619 
+next iteration 
+
+0.0002536776 
+next iteration 
+
+0.001082641 
+next iteration 
+
+0.0012322 
+next iteration 
+
+0.0008516128 
+next iteration 
+
+0.0004781707 
+next iteration 
+
+0.0001996155 
+next iteration 
+
+0.0001741158 
+next iteration 
+
+0.0006890876 
+next iteration 
+
+0.001157757 
+next iteration 
+
+0.003408637 
+next iteration 
+
+0.001228734 
+next iteration 
+
+0.004805531 
+next iteration 
+
+0.004371822 
+next iteration 
+
+0.001044383 
+next iteration 
+
+0.00195607 
+next iteration 
+
+0.002258598 
+next iteration 
+
+0.002155118 
+next iteration 
+
+0.0005156063 
+next iteration 
+
+0.0001445092 
+next iteration 
+
+0.0003629988 
+next iteration 
+
+0.0004555919 
+next iteration 
+
+0.0002381579 
+next iteration 
+
+9.999476e-05 
+next iteration 
+
+
+	Saving output to ./Replications/113/repfit_64_45_113.RData...
+
+
+	DONE!!
