@@ -10,7 +10,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\Preprocess\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\Preprocess\
 ```
 
 ### 3. Call python script with desired arguments:
@@ -34,7 +34,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\Preprocess\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\Preprocess\
 ```
 
 ### 3. Call python script with desired arguments:
@@ -52,7 +52,7 @@ CMD
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 2. Call formatting script with desired arguments:
@@ -73,7 +73,7 @@ Rscript 00-formatting_ExpAgenda.R --infile D:/cong_text/csvs/tokenized/topicmode
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 2. Call script to write PBS files:
@@ -111,7 +111,7 @@ sh ../../02-ExpAgenda_submitter.sh
 CMD
 ```
 d:
-cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\ExpAgenda\
+cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\ExpAgenda\
 ```
 
 ### 3. Call script selection script with desired arguments:
@@ -135,7 +135,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\03-topic_modeling\HDP-check\online-hdp-master\
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\03-topic_modeling\HDP-check\online-hdp-master\
 ```
 
 ### 3. Call script with desired arguments:
