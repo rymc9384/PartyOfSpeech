@@ -29,14 +29,18 @@ if __name__ == "__main__":
     print("Initializing output dataframes and declaring constants...\n")
     comparisonSen = {'_prpnum_feats': ['PRPSING', 'PRPPLUR'],
                      '_vrbtense_feats': ['VBPAST', 'VBFUT'],
-                     '_nounnum_feats': ['NNSING', 'NNPLUR']
+                     '_nounnum_feats': ['NNSING', 'NNPLUR'],
+                     '_nopropnouns_feats': ['NOUN'],
+                     '_allnouns_feats': ['NOUN']
                      }
     comparisonPTB = {'prpnum_feats': ['PRPSING', 'PRPPLUR'],
                      'vrbtense_feats': ['VBPAST', 'VBFUT'],
-                     'nounnum_feats': ['NNSING', 'NNPLUR']
+                     'nounnum_feats': ['NNSING', 'NNPLUR'],
+                     'nopropnouns_feats': ['NOUNA'],
+                     'allnouns_feats': ['NOUNB']
                      }
 
-    outputTags = pd.DataFrame(columns = [v for k in comparisonSen for v in comparisonSen[k]])
+    outputTags = pd.DataFrame(columns = [v for k in comparisonPTB for v in comparisonPTB[k]])
     outputAll = {k: None for k in comparisonSen.keys()}
 
 
@@ -73,10 +77,11 @@ if __name__ == "__main__":
 
         outputAll[featsSen] = a._fwoutput
 
-        for v in comparisonSen[featsSen]:
-            outputTags.loc[0,v] = a.get_word(word=v).zeta.values[0]
-            outputTags.loc[1,v] = a.get_word(word=v).delta.values[0]
-            outputTags.loc[2,v] = a.get_word(word=v)["count"].values[0]
+        for i,v in enumerate(comparisonSen[featsSen]):
+            tmp_w = comparisonPTB[featsPTB][i]
+            outputTags.loc[0,tmp_w] = a.get_word(word=v).zeta.values[0]
+            outputTags.loc[1,tmp_w] = a.get_word(word=v).delta.values[0]
+            outputTags.loc[2,tmp_w] = a.get_word(word=v)["count"].values[0]
 
     
     # add row names to `outputTags`
