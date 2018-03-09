@@ -8,7 +8,7 @@
 CMD
 ```
 > d:
-> cd Dropbox\Dissertation\02-pos_senate\01-code\06-robustness\03-exploratory\
+> cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\06-robustness\03-exploratory\
 ```
 
 ### 2. Call R script

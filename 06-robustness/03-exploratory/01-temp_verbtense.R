@@ -1,7 +1,7 @@
 ## Author: Ryan McMahon
 ## Date Created: 11/30/2017
 ## Date Last Modified: 01/17/2018
-## File: "~/06-robustness/03-exploatory/01-temp_verbtense.R"
+## File: "~/06-robustness/03-exploratory/01-temp_verbtense.R"
 
 ## Purpose: 
 ##      

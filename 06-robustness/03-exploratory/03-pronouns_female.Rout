@@ -1,0 +1,113 @@
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 16299)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] stringr_1.2.0
+
+loaded via a namespace (and not attached):
+[1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    stringi_1.1.5 
+
+
+DEMS
+	Males:          zeta  freq           word
+1  -33.8698023 13039         he_PRP
+7  -32.5994923 15835       his_PRP$
+10 -14.0304903 19577       its_PRP$
+9  -13.1386050 53756         it_PRP
+27  -8.1831899 68918         we_PRP
+30  -6.9389860  7955      your_PRP$
+29  -6.1778630 16985        you_PRP
+11  -3.8411206   537     itself_PRP
+18  -3.2057767   351  ourselves_PRP
+24  -2.7295827  1642 themselves_PRP
+6   -2.3563973   232    himself_PRP
+5   -1.8390422  2379        him_PRP
+26  -1.6924332  7845         us_PRP
+22  -1.0868667    11     theirs_PRP
+31  -0.6081819    45   yourself_PRP
+28  -0.4375119    11         ya_PRP
+15  -0.2654801    71        one_PRP
+12   0.2495581  2844         me_PRP
+14   0.7481479   159     myself_PRP
+19   1.4432929    85          s_PRP
+
+	Females:         zeta  freq         word
+5  -1.8390422  2379      him_PRP
+26 -1.6924332  7845       us_PRP
+22 -1.0868667    11   theirs_PRP
+31 -0.6081819    45 yourself_PRP
+28 -0.4375119    11       ya_PRP
+15 -0.2654801    71      one_PRP
+12  0.2495581  2844       me_PRP
+14  0.7481479   159   myself_PRP
+19  1.4432929    85        s_PRP
+8   1.8854385 52841        i_PRP
+17  1.8875848   151     ours_PRP
+13  1.9839812 10954      my_PRP$
+16  3.5870545 70218     our_PRP$
+4   3.6914124    66  herself_PRP
+21  4.7544902 52100   their_PRP$
+23  6.3923175 12064     them_PRP
+25 12.7715857 34899     they_PRP
+2  15.3145817  1217      her_PRP
+20 52.3819383  5586      she_PRP
+3  60.6129607  7001     her_PRP$
+
+
+REPS:
+	Males:          zeta  freq           word
+10 -27.2229333 52791         it_PRP
+8  -26.5983715 17513       his_PRP$
+2  -26.2724000 14874         he_PRP
+26  -9.1116731 25517       they_PRP
+11  -8.1633494 15393       its_PRP$
+27  -6.2406865  7117         us_PRP
+28  -6.0125666 52799         we_PRP
+12  -5.2531441   735     itself_PRP
+7   -5.2391164   412    himself_PRP
+6   -4.7069856  2647        him_PRP
+24  -4.3910210  9013       them_PRP
+25  -3.8114354   961 themselves_PRP
+20  -2.6410839    86          s_PRP
+32  -1.7384433    76   yourself_PRP
+5   -1.6962712    65    herself_PRP
+16  -1.6409254   101        one_PRP
+19  -1.5464511   270  ourselves_PRP
+18  -0.7997996    93       ours_PRP
+13  -0.7635307  3306         me_PRP
+23  -0.5240952    12     theirs_PRP
+
+	Females:         zeta  freq          word
+20 -2.6410839    86         s_PRP
+32 -1.7384433    76  yourself_PRP
+5  -1.6962712    65   herself_PRP
+16 -1.6409254   101       one_PRP
+19 -1.5464511   270 ourselves_PRP
+18 -0.7997996    93      ours_PRP
+13 -0.7635307  3306        me_PRP
+23 -0.5240952    12    theirs_PRP
+1  -0.3852938     3       all_PRP
+29 -0.3852938     3        ya_PRP
+22  0.3508846 32273    their_PRP$
+15  0.8630783   170    myself_PRP
+30  2.6735825 16487       you_PRP
+31  3.0784413  6080     your_PRP$
+14  4.4843533 10814       my_PRP$
+9   5.0297745 47552         i_PRP
+3   6.4617707   775       her_PRP
+17 17.9047910 51761      our_PRP$
+21 35.5796152  3874       she_PRP
+4  43.8226070  4500      her_PRP$

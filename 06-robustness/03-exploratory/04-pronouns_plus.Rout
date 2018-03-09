@@ -1,0 +1,67 @@
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 16299)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+loaded via a namespace (and not attached):
+[1] compiler_3.4.0
+
+
+	DEMS:
+                                  word      zeta count
+486628               they_PRP need_VBP -25.54886  7637
+486767         they_PRP need_VBP to_TO -25.25659  4904
+573543                   you_PRP to_TO -21.42313  4963
+116945                do_VB their_PRP$ -19.92709  1278
+544397                 we_PRP urge_VBP -19.56251  2459
+515786                urge_VBP you_PRP -19.51734  2479
+515801          urge_VBP you_PRP to_TO -19.42522  2409
+391480           resource_NNS they_PRP -17.90745  1570
+391493  resource_NNS they_PRP need_VBP -17.75050  1513
+454493              their_PRP$ job_NNS -17.65629  1579
+116960        do_VB their_PRP$ job_NNS -17.52248   900
+544480         we_PRP urge_VBP you_PRP -17.02151  1573
+336198          our_PRP$ community_NNS -16.86139  3607
+498273          to_TO do_VB their_PRP$ -16.15634   877
+274223                keep_VB our_PRP$ -15.46073  1763
+341421 our_PRP$ first_JJ responder_NNS -15.30557   825
+345947               our_PRP$ local_JJ -13.62155  1083
+440557    the_DT resource_NNS they_PRP -13.51550  1062
+19728              ._. we_PRP urge_VBP -13.17478  1034
+341360               our_PRP$ first_JJ -13.17478  1034
+
+	REPS:
+                             word     zeta count
+357101       our_PRP$ veteran_NNS 11.77937  2474
+216299             i_PRP would_MD 11.81190  2122
+162666              he_PRP be_VBD 11.98088  2752
+569508           you_PRP have_VBP 12.62185  1840
+15563           ._. it_PRP be_VBZ 12.70900 10640
+209542             i_PRP have_VBP 12.84101  8747
+548036             what_WP we_PRP 13.02589  2002
+222508 in_IN its_PRP$ entirety_NN 13.44598   325
+258772       its_PRP$ entirety_NN 13.44598   325
+118174             do_VBP you_PRP 13.45659   489
+208270               i_PRP do_VBP 13.70312  1535
+332593          our_PRP$ ally_NNS 13.90350  1488
+315569             of_IN his_PRP$ 14.12086  3355
+169401             he_PRP say_VBD 14.36408  1383
+346939       our_PRP$ military_NN 14.90132   952
+566657             you_PRP be_VBP 15.38607  1992
+356308        our_PRP$ troops_NNS 15.63646   882
+214789            i_PRP think_VBP 18.73145  2370
+218014              if_IN you_PRP 21.09798  2190
+236350              it_PRP be_VBZ 22.60105 36528
+null device 
+          1 

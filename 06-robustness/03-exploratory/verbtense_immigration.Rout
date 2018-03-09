@@ -1,44 +1,44 @@
-          zeta freq             word
-2149 -6.036167  479          help_VB
-179  -4.961462  182     announce_VBD
-4801 -4.292502  145  will_MD help_VB
-4272 -3.714778  189       support_VB
-2267 -3.442997  145       improve_VB
-1774 -3.347501   78        expand_VB
-3196 -3.168439   30      preserve_VB
-453  -3.116947   30        bring_VBD
-341  -3.008353   43        award_VBN
-2070 -2.815042   55          grow_VB
-16   -2.765215   31        access_VB
-2151 -2.719222   56         help_VBG
-1172 -2.634444   86        create_VB
-2904 -2.564050  211         need_VBP
-1775 -2.521433   32       expand_VBG
-2473 -2.505597   47          lead_VB
-5125 -2.494200   37 would_MD help_VB
-4274 -2.457898   59      support_VBG
-2154 -2.413745   28         help_VBZ
-463  -2.401124   53         build_VB
-         zeta freq         word
-2058 2.996392   15    grant_VBG
-2443 3.030430   28     kill_VBN
-2044 3.119266   67       go_VBG
-4649 3.167753   24     watch_VB
-183  3.179441   20    answer_VB
-2127 3.191588  278      have_VB
-3135 3.216663   20   please_VBP
-252  3.340647   27   arrest_VBN
-3133 3.487691   53    please_VB
-4991 3.575927   22  withhold_VB
-4630 3.578766   22      want_VB
-917  3.638837   28    comply_VB
-4609 3.808640   61     vote_VBD
-1490 3.829005   86       do_VBD
-3501 3.905180  110   regard_VBG
-2128 4.139945  154     have_VBD
-366  4.344218  883       be_VBD
-1051 4.578951   34 cooperate_VB
-823  4.776781   62     click_VB
-1047 6.439557   66  convict_VBN
+          zeta freq                word
+61   -4.992931  182        announce_VBD
+2081 -4.320863  145     will_MD help_VB
+161  -3.126904   30           bring_VBD
+120  -3.024718   43           award_VBN
+2382 -2.507638   37    would_MD help_VB
+732  -2.359549   25            earn_VBN
+2232 -2.343017   30  will_MD support_VB
+932  -2.316378   39            help_VBD
+2037 -2.031678   14   will_MD enable_VB
+887  -1.993876   19            fund_VBN
+697  -1.928310   26         discuss_VBD
+1314 -1.873265   77            need_VBN
+2330 -1.869878   13  would_MD create_VB
+1946 -1.869340   18         welcome_VBD
+174  -1.858816   11    can_MD access_VB
+2177 -1.758710   32  will_MD provide_VB
+2274 -1.734950   23   would_MD allow_VB
+2440 -1.724707   22 would_MD provide_VB
+1926 -1.715698   32           visit_VBD
+1960 -1.668144   21    will_MD allow_VB
+         zeta freq                   word
+1695 2.242713   22 should_MD not_RB be_VB
+1505 2.293306   13             refuse_VBD
+130  2.374284  492                 be_VBN
+132  2.431543   19               bear_VBN
+1838 2.493927   15               tell_VBD
+1610 2.559570   15               seek_VBD
+1519 2.613678   48            release_VBN
+873  2.657734   19              force_VBD
+148  2.690291   20              block_VBN
+1619 2.691419   21               send_VBN
+2381 2.697875   55       would_MD have_VB
+946  2.848480   32               hold_VBN
+1347 2.903362   14              order_VBN
+1039 3.018443   28               kill_VBN
+87   3.331427   27             arrest_VBN
+1929 3.791014   61               vote_VBD
+712  3.805417   86                 do_VBD
+923  4.109007  154               have_VBD
+129  4.267531  883                 be_VBD
+501  6.430486   66            convict_VBN
 null device 
           1 

@@ -1,18 +1,19 @@
 ## Author: Ryan McMahon
-## Date Created: 12/18/2017
+## Date Created: 03/06/2018
 ## Date Last Modified: 03/06/2018
-## File: "~/06-robustness/03-exploatory/01-verbtense_immigration_plot.R"
+## File: "~/06-robustness/03-exploratory/02a-future_verbs_table.R"
 
-## Purpose: Generate figure showing verbtense differences in `Immigration` 
-##          topic.
+## Purpose: 
+##      
 ##
 
 ## Edits:
-##      03/06/18) Fix paths for GitHub
+##       
+##      
 ##        
 
 ## Notes:
-##      
+##      03/06/18) Based on "01-verbtense_immigration_plot.R" (12/18/2017)
 ##  
 
 ## Local Software Information:
@@ -27,6 +28,7 @@ rm(list = ls())
 library(stringr)
 options(stringsAsFactors = F)
 
+sessionInfo()
 
 ##############################
 ### 0) UTILITIES
@@ -35,10 +37,8 @@ options(stringsAsFactors = F)
 # Call util functions into Global Env:
 source("D:/Dropbox/Dissertation/02-pos_senate/01-code/PartyOfSpeech/06-robustness/utils_fw.R")
 
-# Regex expressions:
+# Regex expression(s):
 FUTVB.re <- "[a-z]+_MD( [a-z]+_RB)? [a-z]+_VB"
-ALLVB.re <- "[a-z]+_VB[A-Z]{0,1}"
-PASTVB.re <- "[a-z]+_VB(N|D)"
 
 ##############################
 ### 1) LOAD & PREP DATA
@@ -52,8 +52,6 @@ df$lemma_text <- gsub(pattern = "[\n]", replacement = '', df$lemma_text)
 
 ## 1.2) Count verbs:
 df$futvb <- str_extract_all(string = df$lemma_text, pattern = FUTVB.re)
-df$allvb <- str_extract_all(string = df$lemma_text, pattern = ALLVB.re)
-df$pastvb <- str_extract_all(string = df$lemma_text, pattern = PASTVB.re)
 
 ## 1.3) Count all tokens:
 df$words <- NA
@@ -68,18 +66,18 @@ for (i in 1:nrow(df)){
 ##############################
 
 ## 2.0) Republican verbs:
-vbR <- make_counts(x = df, count_cols = c('futvb', 'allvb', 'pastvb'), 
-                   party = 'R', topic = 9, totalcol = 'words', 
+vbR <- make_counts(x = df, count_cols = c('futvb'), 
+                   party = 'R', topic = 0, totalcol = 'words', 
                    outcolnames = c('word', 'counts1', 'priors1'))
 
 ## 2.1) Democratic verbs:
-vbD <- make_counts(x = df, count_cols = c('futvb', 'allvb', 'pastvb'), 
-                   party = 'D', topic = 9, totalcol = 'words', 
+vbD <- make_counts(x = df, count_cols = c('futvb'), 
+                   party = 'D', topic = 0, totalcol = 'words', 
                    outcolnames = c('word', 'counts2', 'priors2'))
 
 ## 2.2) Merge R and D counts:
-vbAll <- merge(x = do.call(rbind, vbR$counts[c(1,3)]), 
-               y = do.call(rbind, vbD$counts[c(1,3)]), 
+vbAll <- merge(x = do.call(rbind, vbR$counts), 
+               y = do.call(rbind, vbD$counts), 
                by="word", all = T)
 
 ## 2.3) Fill NAs to avoid numerical errors:
@@ -105,14 +103,3 @@ fw_vbs$word <- vbAll$word
 head(fw_vbs[order(fw_vbs$zeta),], 20)
 tail(fw_vbs[order(fw_vbs$zeta),], 20)
 
-
-##############################
-### 4) MAKE FIGURE
-##############################
-
-pdf(file = "D:/Dropbox/Dissertation/02-pos_senate/02-writing/figures/03-verb_diff_immigration.pdf", 
-    width = 15, height = 10, encoding = "WinAnsi.enc")
-
-fightin_plot(words = fw_vbs$word, zeta = fw_vbs$zeta, freq = fw_vbs$freq, nwords = 15, zcut = 1.96)
-
-dev.off()

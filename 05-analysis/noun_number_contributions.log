@@ -1,0 +1,30 @@
+Loading feature sets...
+
+Finding all party topic count files...
+
+Loading party counts for all topics...
+
+Analyzing all ngrams...
+
+      word       zeta    count
+13723   NN -11.043224  3342653
+
+
+      word       zeta    count
+17223  NNS -75.610108  1591104
+
+
+      word      zeta    count
+15089  NNP -9.065863  3523920
+
+
+       word      zeta   count
+16383  NNPS  8.923289  107108
+
+
+          word       zeta   count
+20665  PRPSING  69.624738  360293
+
+
+          word      zeta   count
+19782  PRPPLUR -9.829103  442050
