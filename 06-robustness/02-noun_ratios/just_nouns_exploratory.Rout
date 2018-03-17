@@ -1,0 +1,186 @@
+	Session info:
+R version 3.4.0 (2017-04-21)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 16299)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  base     
+
+other attached packages:
+[1] optparse_1.4.4 stringr_1.2.0 
+
+loaded via a namespace (and not attached):
+[1] compiler_3.4.0 magrittr_1.5   tools_3.4.0    getopt_1.20.0  stringi_1.1.5 
+[6] methods_3.4.0 
+
+Reading in D:/cong_text/final_pos/topic_lemtag_merged_114.csv...
+Counting nouns...
+* * * * * * * * * * * * * * *		PERFORMING T-TESTS		* * * * * * * * * * * * * * *
+	******T-tests******
+
+Just Nouns:
+	Null = 0:
+	Welch Two Sample t-test
+
+data:  r.nn1 and d.nn1
+t = -27.195, df = 46571, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.009224073 -0.007983841
+sample estimates:
+mean of x mean of y 
+ 0.182498  0.191102 
+
+
+
+Just Nouns:
+	Null = 0.01:
+	Welch Two Sample t-test
+
+data:  r.nn1 and d.nn1
+t = -58.802, df = 46571, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0.01
+95 percent confidence interval:
+ -0.009224073 -0.007983841
+sample estimates:
+mean of x mean of y 
+ 0.182498  0.191102 
+
+
+
+Nouns & Proper:
+	Null = 0:
+	Welch Two Sample t-test
+
+data:  r.nn2 and d.nn2
+t = -11.171, df = 43716, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.005904652 -0.004141950
+sample estimates:
+mean of x mean of y 
+0.3327794 0.3378027 
+
+
+
+Nouns & Proper:
+	Null = 0.01:
+	Welch Two Sample t-test
+
+data:  r.nn2 and d.nn2
+t = -33.41, df = 43716, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0.01
+95 percent confidence interval:
+ -0.005904652 -0.004141950
+sample estimates:
+mean of x mean of y 
+0.3327794 0.3378027 
+
+
+	****** OLS MODELS ******
+	    * Scaled to % *
+
+Just Nouns:
+	Additive:
+Call:
+lm(formula = nouns1 ~ ctr_ntoks + Repub, data = merged)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.1257  -2.1360   0.0648   2.2517  18.2809 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 19.08700    0.02138  892.68   <2e-16 ***
+ctr_ntoks    0.22540    0.01578   14.28   <2e-16 ***
+Repub       -0.80985    0.03167  -25.57   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.454 on 48524 degrees of freedom
+Multiple R-squared:  0.01923,	Adjusted R-squared:  0.01919 
+F-statistic: 475.8 on 2 and 48524 DF,  p-value: < 2.2e-16
+
+
+
+Just Nouns:
+	Interactive:
+Call:
+lm(formula = nouns1 ~ ctr_ntoks * Repub, data = merged)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.1082  -2.1334   0.0611   2.2514  18.3080 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)     19.08549    0.02144 890.300   <2e-16 ***
+ctr_ntoks        0.24006    0.02175  11.036   <2e-16 ***
+Repub           -0.81032    0.03167 -25.587   <2e-16 ***
+ctr_ntoks:Repub -0.03093    0.03160  -0.979    0.328    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.454 on 48523 degrees of freedom
+Multiple R-squared:  0.01925,	Adjusted R-squared:  0.01919 
+F-statistic: 317.5 on 3 and 48523 DF,  p-value: < 2.2e-16
+
+
+
+Nouns & Proper:
+	Additive:
+Call:
+lm(formula = nouns2 ~ ctr_ntoks + Repub, data = merged)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-24.973  -2.925  -0.092   2.668  48.868 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 33.87728    0.02957 1145.72   <2e-16 ***
+ctr_ntoks   -0.94242    0.02182  -43.19   <2e-16 ***
+Repub       -0.71366    0.04379  -16.30   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.777 on 48524 degrees of freedom
+Multiple R-squared:  0.03955,	Adjusted R-squared:  0.03952 
+F-statistic: 999.2 on 2 and 48524 DF,  p-value: < 2.2e-16
+
+
+
+Nouns & Proper:
+	Interactive:
+Call:
+lm(formula = nouns2 ~ ctr_ntoks * Repub, data = merged)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-25.056  -2.925  -0.101   2.661  48.745 
+
+Coefficients:
+                Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)     33.85866    0.02962 1143.011   <2e-16 ***
+ctr_ntoks       -0.76152    0.03006  -25.335   <2e-16 ***
+Repub           -0.71941    0.04376  -16.439   <2e-16 ***
+ctr_ntoks:Repub -0.38183    0.04367   -8.744   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.773 on 48523 degrees of freedom
+Multiple R-squared:  0.04107,	Adjusted R-squared:  0.04101 
+F-statistic: 692.7 on 3 and 48523 DF,  p-value: < 2.2e-16
+
+
+
+	DONE!!

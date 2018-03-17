@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 03/06/2018
-## Date Last Modified: 03/06/2018
+## Date Last Modified: 03/15/2018
 ## File: "~/06-robustness/03-exploratory/02a-future_verbs_table.R"
 
 ## Purpose: 
@@ -8,7 +8,7 @@
 ##
 
 ## Edits:
-##       
+##       03/15/18) Drop docs w/ < 25 tokens
 ##      
 ##        
 
@@ -59,6 +59,9 @@ df$words <- NA
 for (i in 1:nrow(df)){
   df$words[i] <- count_tokens(df$lemma_text[i])
 }
+
+## 1.4) Drop docs w/ fewer than 25 tokens:
+df <- df[df$words >= 25, ]
 
 
 ##############################

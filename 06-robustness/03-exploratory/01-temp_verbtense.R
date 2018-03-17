@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 11/30/2017
-## Date Last Modified: 01/17/2018
+## Date Last Modified: 03/16/2018
 ## File: "~/06-robustness/03-exploratory/01-temp_verbtense.R"
 
 ## Purpose: 
@@ -67,15 +67,15 @@ for (i in 1:nrow(df)){
 
 
 vbR <- make_counts(x = df, count_cols = c('futvb', 'pastvb', 'allvb'), 
-                   party = 'R', topic = 9, totalcol = 'words', 
+                   party = 'R', topic = 0, totalcol = 'words', 
                    outcolnames = c('word', 'counts1', 'priors1'))
 
 vbD <- make_counts(x = df, count_cols = c('futvb', 'pastvb', 'allvb'), 
-                   party = 'D', topic = 9, totalcol = 'words', 
+                   party = 'D', topic = 0, totalcol = 'words', 
                    outcolnames = c('word', 'counts2', 'priors2'))
 
-vbAll <- merge(x = do.call(rbind, vbR$counts[c(1,3)]), 
-               y = do.call(rbind, vbD$counts[c(1,3)]), 
+vbAll <- merge(x = do.call(rbind, vbR$counts[c(2)]), 
+               y = do.call(rbind, vbD$counts[c(2)]), 
                by="word", all = T)
 
 # avoid numerical errors:

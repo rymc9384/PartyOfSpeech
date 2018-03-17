@@ -10,7 +10,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\06-robustness\01-unigrams
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\06-robustness\01-unigrams
 ```
 
 ### 3. Call python script w/ desired args:
@@ -32,7 +32,7 @@ CMD
 CMD
 ```
 (textcleaning) > d:
-(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\06-robustness\01-unigrams
+(textcleaning) > cd Dropbox\Dissertation\02-pos_senate\01-code\PartyOfSpeech\06-robustness\01-unigrams
 ```
 
 ### 3. Call python script w/ desired args (either using tag only or lem_tag data):

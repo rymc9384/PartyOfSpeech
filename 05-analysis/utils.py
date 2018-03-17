@@ -165,3 +165,127 @@ class analysisutils(object):
         
         return self._fwoutput[self._fwoutput.word == word]
         
+
+def tokenizer(x):
+    return x.split(' ')  		
+		
+class buildrawdtm(object):
+    
+    def __init__(self, ub_min=0.9, lb_max=0.005, ngrams=(1,3), lower=False, \
+                 tokenizer=tokenizer):
+        self.__ub_min = ub_min
+        self.__lb_max = lb_max
+        self.__ngrams = ngrams
+        self.__lower = lower
+        
+        self.__tokenizer = tokenizer
+        
+        self.__CVub = CountVectorizer(min_df=ub_min, tokenizer=self.__tokenizer, \
+                                      ngram_range=ngrams, lowercase=lower)
+        self.__CVlb = CountVectorizer(max_df=lb_max, tokenizer=self.__tokenizer, \
+                                      ngram_range=ngrams, lowercase=lower)
+        self.__CVfull = CountVectorizer(tokenizer=self.__tokenizer, \
+                                        ngram_range=ngrams, lowercase=lower)
+        
+        self.commonngrams_general = []
+        self.commonngrams_sens = []
+        
+      
+    def fit_transformfull(self, text):
+        """
+        Fit a countvectorizer to the text.
+        """
+        
+        self.DTM = self.__CVfull.fit_transform(text)
+        self.DTM_features = self.__CVfull.get_feature_names()
+        self.nrows, self.ncols = self.DTM.shape
+        
+        
+    def get_commonngrams(self, text, general=False):
+        """
+        Get ngrams that appear in 90% or more of texts.
+        """
+        
+        CVcommon = self.__CVub.fit(text)
+        
+        if general:
+            self.commonngrams_general += CVcommon.get_feature_names()
+        else:
+            self.commonngrams_sens += CVcommon.get_feature_names()
+            self.commonngrams_sens = list(set(self.commonngrams_sens))
+            
+    
+    def get_rarengrams(self, text):
+        """
+        Get ngrams that appear in 0.5% or less of texts.
+        """
+        
+        CVrare = self.__CVlb.fit(text)
+        self.rarengrams = CVrare.get_feature_names()
+        
+    
+    def make_exclusive_commonngrams(self):
+        """
+        Take the senator specific and general commonngrams and make them 
+        mutually exclusive lists.
+        """
+    
+        self.commonngrams_sens = [x for x in self.commonngrams_sens if x not in self.commonngrams_general]
+    
+
+    def get_tagsonly(self):
+        """
+        Generate tag only feature names
+        """
+        
+        self.tagonly_features = [re.sub('[^\s]+_', '', feat) for feat in self.DTM_features]
+         
+        
+    def make_replacement_feats(self, which='general'):
+        """
+        Make the replacements for the common or rare features (e.g., the_DT -> GENERAL_DT)
+        ############
+        ## ARGS: 
+        #  1) which (str) = name of ngram list to operate on; 
+        #                   which \in ['general', 'sens', 'rare']
+        #
+        ############
+        """
+        
+        which = which.lower()
+        if which not in ['general', 'sens', 'rare']:
+            print("which arg not in ['general', 'sens', 'rare']!")
+            raise(TypeError)
+        
+        if which == 'general':
+            self.general_replacements = [re.sub('\\w+(?=_)', 'GENERAL', x) for x in self.commonngrams_general]
+        elif which == 'sens':
+            self.sens_replacements = [re.sub('\\w+(?=_)', 'SPECIFIC', x) for x in self.commonngrams_sens]
+        else:
+            self.rare_replacements = [re.sub('\\w+(?=_)', 'RARE', x) for x in self.rarengrams]
+            
+            
+        
+    def substitutefeats(self, toreplace, replacement, tagsonly=False):
+        """
+        Edit feature names for rare or common features.
+        
+        ############
+        ## ARGS: 
+        #  1) toreplace (list) = list of featurenames to edit
+        #  2) replacement (list) = list of replacements for those edits;
+        #                           need to be ordered 1:1 with the toreplace list
+        #  3) tagsonly (bool) = editing tagonly feature names or not; default = False
+        #
+        #############
+        """
+        
+        if not tagsonly:
+            for i in range(len(toreplace)):
+                tempidx = self.DTM_features.index(toreplace[i])
+                self.DTM_features[tempidx] = replacement[i]
+        else:
+            for i in range(len(toreplace)):
+                tempidx = self.tagonly_features.index(toreplace[i])
+                self.tagonly_features[tempidx] = replacement[i]
+        

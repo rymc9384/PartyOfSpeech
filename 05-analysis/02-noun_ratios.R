@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 11/09/2017
-## Date Last Modified: 11/26/2017
+## Date Last Modified: 03/12/2018
 ## File: "~/05-analysis/02-noun_ratios.R"
 
 ## Purpose: 
@@ -9,6 +9,7 @@
 
 ## Edits:
 ##      11/26/17) Save t-test results as RData file, in addition to log file.
+##      03/12/18) Drop releases w/ fewer than 25 tokens.
 ##        
 ## 
 
@@ -85,6 +86,7 @@ merged <- read.csv(opt$infile)
 
 cat("Counting nouns...\n")
 
+merged$ntoks <- NA
 merged$allnouns <- NA
 merged$nopropnouns <- NA
 
@@ -92,10 +94,15 @@ for (i in 1:nrow(merged)){
   
   grams <- get_tags(text = merged$lemma_text[i])
   
+  merged$ntoks[i] <- length(grams)
   merged$allnouns[i] <- noun_ratio(grams = grams, propernouns = TRUE)
   merged$nopropnouns[i] <- noun_ratio(grams = grams, propernouns = FALSE)
   
 }
+
+
+## Drop releases with fewer than 25 tokens:
+merged <- merged[merged$ntoks >= 25, ]
 
 
 #########################

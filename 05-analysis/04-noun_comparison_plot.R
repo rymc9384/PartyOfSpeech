@@ -13,6 +13,7 @@
 ##
 
 ## Edits:
+##      03/12/18) Add encoding arg to `pdf()` function
 ##      
 ##        
 ## 
@@ -85,7 +86,7 @@ Cich.mu <- median(diffs) * 100
 
 
 pdf(file = "D:/Dropbox/Dissertation/02-pos_senate/02-writing/figures/01-noun_ratio_comparison.pdf", 
-    width = 10.5, height = 7)
+    width = 10.5, height = 7, encoding = "WinAnsi.enc")
 
 # adjust margins
 par(mar=c(5,5,2,2))

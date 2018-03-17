@@ -23,46 +23,46 @@ loaded via a namespace (and not attached):
 
 	DEMS:
            zeta freq                            word
-14371 -6.502368  205      which_WDT would_MD help_VB
-12412 -6.257251  518       that_WDT would_MD help_VB
-2064  -5.133818  259        bill_NN would_MD help_VB
-291   -4.600253  146     act_NNP would_MD provide_VB
+14371 -6.502369  205      which_WDT would_MD help_VB
+12412 -6.257253  518       that_WDT would_MD help_VB
+2064  -5.133819  259        bill_NN would_MD help_VB
+291   -4.600254  146     act_NNP would_MD provide_VB
 225   -4.502320   75        act_NNP would_MD give_VB
-12336 -4.381082   97     that_WDT would_MD extend_VB
-1179  -3.931672  142           and_CC would_MD be_VB
-2017  -3.914783   86   bill_NN would_MD establish_VB
-233   -3.712014  155        act_NNP would_MD help_VB
+12336 -4.381083   97     that_WDT would_MD extend_VB
+1179  -3.931673  142           and_CC would_MD be_VB
+2017  -3.914784   86   bill_NN would_MD establish_VB
+233   -3.712015  155        act_NNP would_MD help_VB
 197   -3.678295  100      act_NNP would_MD ensure_VB
-12185 -3.603580   45      that_WDT would_MD close_VB
-12691 -3.465447   58    that_WDT would_MD restore_VB
+12185 -3.603581   45      that_WDT would_MD close_VB
+12691 -3.465448   58    that_WDT would_MD restore_VB
 4959  -3.461065   45    funding_NN would_MD allow_VB
 2053  -3.398800   81        bill_NN would_MD give_VB
 1296  -3.331390   41         and_CC would_MD make_VB
 1977  -3.273542  108      bill_NN would_MD create_VB
 4977  -3.194420   35     funding_NN would_MD help_VB
-12395 -3.073639  179       that_WDT would_MD give_VB
+12395 -3.073640  179       that_WDT would_MD give_VB
 202   -3.020208   61      act_NNP would_MD expand_VB
-14316 -3.016040   52 which_WDT would_MD establish_VB
+14316 -3.016041   52 which_WDT would_MD establish_VB
 
 	REPS:
           zeta freq                          word
 12028 3.123900   19      that_DT would_MD mean_VB
 1992  3.153824   41    bill_NN would_MD direct_VB
-6504  3.176698   39         it_PRP would_MD do_VB
+6504  3.176697   39         it_PRP would_MD do_VB
 9371  3.265362   22   president_NN would_MD be_VB
-12684 3.329209  421  that_WDT would_MD require_VB
+12684 3.329208  421  that_WDT would_MD require_VB
 8726  3.406162   25 otherwise_RB would_MD have_VB
 5659  3.549579   66         i_PRP would_MD ask_VB
 12626 3.713000  166  that_WDT would_MD prevent_VB
 10738 3.734178   46      rule_NN would_MD have_VB
-14510 3.845027  233 which_WDT would_MD require_VB
-6833  4.082097   97    it_PRP would_MD require_VB
-12902 4.107152  147       there_EX would_MD be_VB
-5758  4.176978  663        i_PRP would_MD like_VB
+14510 3.845026  233 which_WDT would_MD require_VB
+6833  4.082096   97    it_PRP would_MD require_VB
+12902 4.107151  147       there_EX would_MD be_VB
+5758  4.176977  663        i_PRP would_MD like_VB
 12788 4.250244   36     that_WDT would_MD stop_VB
-6430  4.524194  745         it_PRP would_MD be_VB
+6430  4.524193  745         it_PRP would_MD be_VB
 12634 4.720993  149 that_WDT would_MD prohibit_VB
 3330  4.976422   55 congress_NNP would_MD have_VB
-5825  5.109262   92         i_PRP would_MD say_VB
-5699  5.431902   74   i_PRP would_MD encourage_VB
+5825  5.109261   92         i_PRP would_MD say_VB
+5699  5.431901   74   i_PRP would_MD encourage_VB
 5784  6.015209   65        i_PRP would_MD note_VB

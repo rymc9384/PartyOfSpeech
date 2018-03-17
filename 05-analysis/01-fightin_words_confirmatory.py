@@ -32,7 +32,8 @@ if __name__ == "__main__":
                 '_vrbtense_feats': ['VBPAST', 'VBFUT'],
                 '_nounnum_feats': ['NNSING', 'NNPLUR']
               }
-    output = {k: pd.DataFrame(columns = ['topic'] + comparisons[k]) for k in comparisons.keys()}
+    output = {k: pd.DataFrame(columns = ['topic'] + comparisons[k], 
+                              index = [i for i in range(45+1)]) for k in comparisons.keys()}
     
     print("Loading feature sets...\n")
     feats = featureset(featurefile = ARGS.infeatures)

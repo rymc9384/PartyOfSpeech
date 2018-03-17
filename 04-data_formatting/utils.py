@@ -262,7 +262,7 @@ class newfeatures(object):
                                       "(?<=(this|that|mine|hers))|" +
                                       "(?<=myself)|(?<=(himself|herself))|(?<=yourself))" +
 									  "_PRP\$?")
-        self._prpplur_re = re.compile("((?<=(we|us))|(?<=our)|" +
+        self._prpplur_re = re.compile("((?<=(we|us))|(?<=^our)|(?<=\sour)|" +
                                       "(?<=(they|them|ours))|" +
                                       "(?<=(these|those|their))|(?<=theirs)|" +
                                       "(?<=ourselves)|" +

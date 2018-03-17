@@ -14,5 +14,5 @@ CMD
 ### 2. Call R script
 CMD
 ```
-> RScript 01-verbtense_immigration_plot.R > verbtense_immigration.Rout
+> RScript 01-verbtense_immigration_plot.R > 01-verbtense_immigration.Rout
 ```

@@ -36,7 +36,7 @@ if __name__ == "__main__":
 								  "(?<=(this|that|mine|hers))|" +
 								  "(?<=myself)|(?<=(himself|herself))|(?<=yourself))" +
 								  "_PRP\$?")
-    prpplur_re = re.compile("((?<=(we|us))|(?<=our)|(?<=(they|them|ours))|" +
+    prpplur_re = re.compile("((?<=(we|us))|(?<=^our)|(?<=\sour)|(?<=(they|them|ours))|" +
 								  "(?<=(these|those|their))|(?<=theirs)|" +
 								  "(?<=ourselves)|" +
 								  "(?<=(yourselves|themselves)))_PRP\$?")

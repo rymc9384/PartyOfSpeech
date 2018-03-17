@@ -9,6 +9,7 @@
 
 ## Edits:
 ##      03/06/18) Fix paths for GitHub
+##      03/15/18) Drop docs w/ < 25 tokens
 ##        
 
 ## Notes:
@@ -61,6 +62,9 @@ df$words <- NA
 for (i in 1:nrow(df)){
   df$words[i] <- count_tokens(df$lemma_text[i])
 }
+
+## 1.4) Drop docs w/ fewer than 25 tokens:
+df <- df[df$words >= 25, ]
 
 
 ##############################

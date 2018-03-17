@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 03/08/2018
-## Date Last Modified: 03/09/2018
+## Date Last Modified: 03/15/2018
 ## File: "~/06-robustness/03-exploratory/02b-future_verbs_would.R"
 
 ## Purpose: 
@@ -9,6 +9,7 @@
 
 ## Edits:
 ##       03/09/18) Clean up formatting
+##       03/15/18) Drop docs w/ < 25 tokens
 ##      
 ##        
 
@@ -57,11 +58,11 @@ df$would <- str_extract_all(string = df$lemma_text, pattern = WOULD.re)
 df$words <- NA
 
 for (i in 1:nrow(df)){
-  
   df$words[i] <- count_tokens(df$lemma_text[i])
-  
 }
 
+## 1.4) Drop docs w/ fewer than 25 tokens:
+df <- df[df$words >= 25, ]
 
 ##############################
 ### 2) SUBSET COUNTS

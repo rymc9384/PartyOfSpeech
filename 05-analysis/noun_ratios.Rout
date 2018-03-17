@@ -30,13 +30,13 @@ All nouns t-test:
 	Welch Two Sample t-test
 
 data:  r.allnn and d.allnn
-t = -34.478, df = 44034, p-value < 2.2e-16
+t = -34.537, df = 43992, p-value < 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0.01
 95 percent confidence interval:
- -0.004012002 -0.002504560
+ -0.004025537 -0.002519076
 sample estimates:
 mean of x mean of y 
-0.3649251 0.3681834 
+0.3649251 0.3681974 
 
 
 
@@ -44,13 +44,13 @@ No proper nouns t-test:
 	Welch Two Sample t-test
 
 data:  r.noprop and d.noprop
-t = -49.35, df = 45905, p-value < 2.2e-16
+t = -49.389, df = 45890, p-value < 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0.01
 95 percent confidence interval:
- -0.007513528 -0.006175523
+ -0.007521772 -0.006184154
 sample estimates:
 mean of x mean of y 
-0.2146437 0.2214882 
+0.2146437 0.2214967 
 
 
 
