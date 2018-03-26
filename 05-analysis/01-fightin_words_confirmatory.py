@@ -16,6 +16,8 @@ if __name__ == "__main__":
 
     # parsing arguments
     parser = argparse.ArgumentParser(description="Conduct intra- and inter-topic analyses")
+    parser.add_argument('--cong', help="Which Congress is this for", required=True, \
+                        default="114")
     parser.add_argument('--infeatures', help="Features object file", required=True, \
                         default="D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl")
     parser.add_argument('--intopicpattern', help="Path with pattern for party topic counts", \
@@ -70,7 +72,7 @@ if __name__ == "__main__":
         
     for k in output.keys():
         tmp = output[k]
-        outfile = ARGS.outpath + '113zetas' + k + '.csv'
+        outfile = ARGS.outpath + ARGS.cong + 'zetas' + k + '.csv'
         tmp.to_csv(outfile, index=False, encoding='utf-8')
         print("\t{} saved...".format(outfile))
         

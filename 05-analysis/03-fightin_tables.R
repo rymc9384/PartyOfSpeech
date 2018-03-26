@@ -62,11 +62,11 @@ topicsig <- function(zetas, cutR=R.ZETA2, cutD=D.ZETA2){
 #########################
 
 # pronouns
-prp.df <- read.csv("D:/cong_text/final_pos/analysis/zetas_prpnum_feats.csv")
+prp.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_prpnum_feats.csv")
 # verbs
-vb.df <- read.csv("D:/cong_text/final_pos/analysis/zetas_vrbtense_feats.csv")
+vb.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_vrbtense_feats.csv")
 # nouns
-nn.df <- read.csv("D:/cong_text/final_pos/analysis/zetas_nounnum_feats.csv")
+nn.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_nounnum_feats.csv")
 
 # merge
 df <- cbind(prp.df, vb.df[,-1], nn.df[,-1])
@@ -126,4 +126,4 @@ for (i in 2:7){
 
 tab.full <- rbind(tab.inter, tab.intra, n.sig)
 
-write.csv(x = tab.full, file = "D:/cong_text/final_pos/analysis/zetas_table.csv", row.names = F)
+write.csv(x = tab.full, file = "D:/cong_text/final_pos/analysis/114zetas_table.csv", row.names = F)

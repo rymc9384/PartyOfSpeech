@@ -16,7 +16,10 @@ CMD
 ### 3. Call python script w/ desired args:
 CMD
 ```
-(textcleaning) > python 01-fightin_words_confirmatory.py --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts* --outpath D:/cong_text/final_pos/analysis/ > fightin_words_confirmatory.log
+\\ 114th Congress
+(textcleaning) > python 01-fightin_words_confirmatory.py --cong 114 --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts* --outpath D:/cong_text/final_pos/analysis/ > fightin_words_confirmatory114.log
+\\ 113th Congress
+(textcleaning) > python 01-fightin_words_confirmatory.py --cong 113 --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab113.pkl --intopicpattern D:/cong_text/final_pos/DTMs/113party_counts* --outpath D:/cong_text/final_pos/analysis/ > fightin_words_confirmatory113.log
 ```
 
 
@@ -34,7 +37,7 @@ CMD
 ### 2. Call R script (change merged data location)
 CMD
 ```
-> RScript 02-noun_ratios.R --infile D:/cong_text/final_pos/topic_lemtag_merged_114.csv --logfile ./noun_ratios.Rout --outfile D:/cong_text/final_pos/analysis/noun_ratios.RData
+> RScript 02-noun_ratios.R --infile D:/cong_text/final_pos/topic_lemtag_merged_114.csv --logfile ./noun_ratios114.Rout --outfile D:/cong_text/final_pos/analysis/noun_ratios.RData
 ```
 
 
@@ -57,7 +60,7 @@ CMD
 ### 3. Call python script w/ desired args:
 CMD
 ```
-(textcleaning) > python 05-pronoun_ngram_fightin_words.py --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts* --outpath D:/cong_text/robust/exploratory/ > pronoun_ngram.log
+(textcleaning) > python 05-pronoun_ngram_fightin_words.py --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts* --outpath D:/cong_text/robust/exploratory/ > pronoun_ngram114.log
 ```
 
 
@@ -79,5 +82,5 @@ CMD
 ### 3. Call python script w/ desired args:
 CMD
 ```
-(textcleaning) > python 06-noun_number_contributions.py --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts*  > noun_number_contributions.log
+(textcleaning) > python 06-noun_number_contributions.py --infeatures D:/cong_text/final_pos/DTMs/newfeatures_vocab.pkl --intopicpattern D:/cong_text/final_pos/DTMs/party_counts*  > noun_number_contributions114.log
 ```
