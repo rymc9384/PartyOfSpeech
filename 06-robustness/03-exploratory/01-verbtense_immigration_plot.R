@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 12/18/2017
-## Date Last Modified: 03/06/2018
+## Date Last Modified: 03/27/2018
 ## File: "~/06-robustness/03-exploatory/01-verbtense_immigration_plot.R"
 
 ## Purpose: Generate figure showing verbtense differences in `Immigration` 
@@ -10,6 +10,7 @@
 ## Edits:
 ##      03/06/18) Fix paths for GitHub
 ##      03/15/18) Drop docs w/ < 25 tokens
+##      03/27/18) Use plot w/o point labels and POS/group alignment, update size to 12x10
 ##        
 
 ## Notes:
@@ -103,7 +104,9 @@ fw_vbs <- fightin(n1 = vbR$nwords, n2 = vbD$nwords,
                   priors1 = vbAll$priors1, priors2 = vbAll$priors2)
 
 ## 3.1) Index words:
-fw_vbs$word <- vbAll$word
+fw_vbs$tagged <- vbAll$word
+fw_vbs$word <- gsub(pattern = "_.*?(?=($| ))", replacement = '', x = fw_vbs$tagged, perl = T)
+
 
 ## 3.2) Print most partisan words:
 head(fw_vbs[order(fw_vbs$zeta),], 20)
@@ -115,8 +118,10 @@ tail(fw_vbs[order(fw_vbs$zeta),], 20)
 ##############################
 
 pdf(file = "D:/Dropbox/Dissertation/02-pos_senate/02-writing/figures/03-verb_diff_immigration.pdf", 
-    width = 15, height = 10, encoding = "WinAnsi.enc")
+    width = 12, height = 10, encoding = "WinAnsi.enc")
 
-fightin_plot(words = fw_vbs$word, zeta = fw_vbs$zeta, freq = fw_vbs$freq, nwords = 15, zcut = 1.96)
+with(fw_vbs,
+     fw_nowords_plot(word, tagged, zeta, freq, nwords = 15, zcut = 1.96, ylims=c(-8,8), yspace=2)
+)
 
 dev.off()

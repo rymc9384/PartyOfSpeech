@@ -1,44 +1,44 @@
-          zeta freq                word
-61   -4.992911  182        announce_VBD
-2081 -4.320845  145     will_MD help_VB
-161  -3.126896   30           bring_VBD
-120  -3.024703   43           award_VBN
-2382 -2.507628   37    would_MD help_VB
-732  -2.359540   25            earn_VBN
-2232 -2.343010   30  will_MD support_VB
-932  -2.316368   39            help_VBD
-2037 -2.031672   14   will_MD enable_VB
-887  -1.993867   19            fund_VBN
-697  -1.928303   26         discuss_VBD
-1314 -1.873256   77            need_VBN
-2330 -1.869871   13  would_MD create_VB
-1946 -1.869335   18         welcome_VBD
-174  -1.858813   11    can_MD access_VB
-2177 -1.758702   32  will_MD provide_VB
-2274 -1.734941   23   would_MD allow_VB
-2440 -1.724700   22 would_MD provide_VB
-1926 -1.715692   32           visit_VBD
-1960 -1.668134   21    will_MD allow_VB
-         zeta freq                   word
-1695 2.242702   22 should_MD not_RB be_VB
-1505 2.293299   13             refuse_VBD
-130  2.374269  492                 be_VBN
-132  2.431531   19               bear_VBN
-1838 2.493914   15               tell_VBD
-1610 2.559563   15               seek_VBD
-1519 2.613667   48            release_VBN
-873  2.657731   19              force_VBD
-148  2.690286   20              block_VBN
-1619 2.691407   21               send_VBN
-2381 2.697862   55       would_MD have_VB
-946  2.848464   32               hold_VBN
-1347 2.903362   14              order_VBN
-1039 3.018431   28               kill_VBN
-87   3.331423   27             arrest_VBN
-1929 3.791000   61               vote_VBD
-712  3.805397   86                 do_VBD
-923  4.108986  154               have_VBD
-129  4.267504  883                 be_VBD
-501  6.430498   66            convict_VBN
+          zeta freq              tagged          word
+61   -4.992911  182        announce_VBD      announce
+2081 -4.320845  145     will_MD help_VB     will help
+161  -3.126896   30           bring_VBD         bring
+120  -3.024703   43           award_VBN         award
+2382 -2.507628   37    would_MD help_VB    would help
+732  -2.359540   25            earn_VBN          earn
+2232 -2.343010   30  will_MD support_VB  will support
+932  -2.316368   39            help_VBD          help
+2037 -2.031672   14   will_MD enable_VB   will enable
+887  -1.993867   19            fund_VBN          fund
+697  -1.928303   26         discuss_VBD       discuss
+1314 -1.873256   77            need_VBN          need
+2330 -1.869871   13  would_MD create_VB  would create
+1946 -1.869335   18         welcome_VBD       welcome
+174  -1.858813   11    can_MD access_VB    can access
+2177 -1.758702   32  will_MD provide_VB  will provide
+2274 -1.734941   23   would_MD allow_VB   would allow
+2440 -1.724700   22 would_MD provide_VB would provide
+1926 -1.715692   32           visit_VBD         visit
+1960 -1.668134   21    will_MD allow_VB    will allow
+         zeta freq                 tagged          word
+1695 2.242702   22 should_MD not_RB be_VB should not be
+1505 2.293299   13             refuse_VBD        refuse
+130  2.374269  492                 be_VBN            be
+132  2.431531   19               bear_VBN          bear
+1838 2.493914   15               tell_VBD          tell
+1610 2.559563   15               seek_VBD          seek
+1519 2.613667   48            release_VBN       release
+873  2.657731   19              force_VBD         force
+148  2.690286   20              block_VBN         block
+1619 2.691407   21               send_VBN          send
+2381 2.697862   55       would_MD have_VB    would have
+946  2.848464   32               hold_VBN          hold
+1347 2.903362   14              order_VBN         order
+1039 3.018431   28               kill_VBN          kill
+87   3.331423   27             arrest_VBN        arrest
+1929 3.791000   61               vote_VBD          vote
+712  3.805397   86                 do_VBD            do
+923  4.108986  154               have_VBD          have
+129  4.267504  883                 be_VBD            be
+501  6.430498   66            convict_VBN       convict
 null device 
           1 
