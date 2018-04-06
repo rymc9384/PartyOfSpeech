@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 11/27/2017
-## Date Last Modified: 11/27/2017
+## Date Last Modified: 04/03/2018
 ## File: "~/05-analysis/03-fightin_tables.R"
 
 ## Purpose: 
@@ -8,7 +8,8 @@
 ##
 
 ## Edits:
-## 
+##        04/03/18) Modify to accomodate the in-data having zeta and delta 
+##                  columns
 ##        
 ## 
 
@@ -62,11 +63,11 @@ topicsig <- function(zetas, cutR=R.ZETA2, cutD=D.ZETA2){
 #########################
 
 # pronouns
-prp.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_prpnum_feats.csv")
+prp.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_deltas_prpnum_feats.csv")
 # verbs
-vb.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_vrbtense_feats.csv")
+vb.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_deltas_vrbtense_feats.csv")
 # nouns
-nn.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_nounnum_feats.csv")
+nn.df <- read.csv("D:/cong_text/final_pos/analysis/114zetas_deltas_nounnum_feats.csv")
 
 # merge
 df <- cbind(prp.df, vb.df[,-1], nn.df[,-1])
@@ -78,21 +79,22 @@ df <- df[-1, ]
 # remove constituent frames
 rm('prp.df', 'vb.df', 'nn.df')
 
-
+# columns w/ zetas
+zcols <- grep(pattern = "zeta", x = colnames(df))
 
 #########################
 ### 2) INTERTOPIC
 #########################
 
-tab.inter <- df.inter
-tab.inter[1,2:7] <- topicsig(zetas = tab.inter[1,2:7], cutR = R.ZETA1, cutD = D.ZETA1)
+tab.inter <- df.inter[,c(1,zcols)]
+tab.inter[1,-1] <- topicsig(zetas = tab.inter[1,-1], cutR = R.ZETA1, cutD = D.ZETA1)
 
 
 #########################
 ### 3) INTRATOPIC
 #########################
 
-tab.intra <- df
+tab.intra <- df[,c(1,zcols)]
 
 for (i in 2:7){
   

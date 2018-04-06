@@ -127,21 +127,21 @@ class analysisutils(object):
         term1 = np.log( np.add(counts1, priors1) /(n1 + a01 - np.add(counts1, priors1)))
         term2 = np.log( np.add(counts2, priors2) /(n2 + a02 - np.add(counts2, priors2)))
         
-        delta = np.subtract(term1,term2)
+        deltas = np.subtract(term1,term2)
             
         # compute variance on delta
         var = np.add( 1 / np.add(counts1, priors1), 1 / np.add(counts2, priors2) )
         
         # list of zetas (positive zetas indicate the word is associated w/ group1)
-        z_scores = list(np.divide(delta, np.sqrt(var)))
+        z_scores = list(np.divide(deltas, np.sqrt(var)))
             
         # store total count:
         full_counts = list(np.add(counts1, counts2))
             
         # Put into data frame:
-        rows = [[row[0], row[1], row[2]] for row in zip(words,z_scores,full_counts)]
+        rows = [[row[0], row[1], row[2], row[3]] for row in zip(words,z_scores,deltas,full_counts)]
         out = pd.DataFrame(rows)
-        out.columns = ['word','zeta','count']
+        out.columns = ['word','zeta','delta','count']
         
         self._fwoutput = out
         

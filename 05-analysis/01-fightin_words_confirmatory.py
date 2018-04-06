@@ -34,7 +34,9 @@ if __name__ == "__main__":
                 '_vrbtense_feats': ['VBPAST', 'VBFUT'],
                 '_nounnum_feats': ['NNSING', 'NNPLUR']
               }
-    output = {k: pd.DataFrame(columns = ['topic'] + comparisons[k], 
+    outputz = {k: pd.DataFrame(columns = ['topic'] + comparisons[k], 
+                              index = [i for i in range(45+1)]) for k in comparisons.keys()}
+    outputd = {k: pd.DataFrame(columns = ['topic'] + comparisons[k], 
                               index = [i for i in range(45+1)]) for k in comparisons.keys()}
     
     print("Loading feature sets...\n")
@@ -59,10 +61,11 @@ if __name__ == "__main__":
             a.fightinwords()
             
             for v in comparisons[k]:
-                output[k].loc[i,v] = a.get_word(word=v).zeta.values[0]
-                
-            output[k].topic[i] = i
-            
+                outputz[k].loc[i,v] = a.get_word(word=v).zeta.values[0]
+                outputd[k].loc[i,v] = a.get_word(word=v).delta.values[0]
+            outputz[k].topic[i] = i
+            outputd[k].topic[i] = i
+                   
         print("\n")
         
         
@@ -70,9 +73,16 @@ if __name__ == "__main__":
     if not os.path.exists(ARGS.outpath):
         os.makedirs(ARGS.outpath)
         
-    for k in output.keys():
-        tmp = output[k]
-        outfile = ARGS.outpath + ARGS.cong + 'zetas' + k + '.csv'
+    for k in comparisons.keys():
+        tmpz = outputz[k]
+        tmpd = outputd[k]
+        
+        tmpz.columns = ['topic'] + ["".join([c,"zeta"]) for c in tmpz.columns[1:]]
+        tmpd.columns = ['topic'] + ["".join([c,"delta"]) for c in tmpd.columns[1:]]
+        
+        tmp = pd.concat([tmpz,tmpd.iloc[:,1:]], axis=1)
+        
+        outfile = ARGS.outpath + ARGS.cong + 'zetas_deltas' + k + '.csv'
         tmp.to_csv(outfile, index=False, encoding='utf-8')
         print("\t{} saved...".format(outfile))
         

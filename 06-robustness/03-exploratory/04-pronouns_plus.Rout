@@ -18,50 +18,71 @@ loaded via a namespace (and not attached):
 [1] compiler_3.4.0
 
 
+**** MOST PARTISAN BI & TRIGRAMS ****
 	DEMS:
-                                  word      zeta count
-486628               they_PRP need_VBP -25.54886  7637
-486767         they_PRP need_VBP to_TO -25.25659  4904
-573543                   you_PRP to_TO -21.42313  4963
-116945                do_VB their_PRP$ -19.92709  1278
-544397                 we_PRP urge_VBP -19.56251  2459
-515786                urge_VBP you_PRP -19.51734  2479
-515801          urge_VBP you_PRP to_TO -19.42522  2409
-391480           resource_NNS they_PRP -17.90745  1570
-391493  resource_NNS they_PRP need_VBP -17.75050  1513
-454493              their_PRP$ job_NNS -17.65629  1579
-116960        do_VB their_PRP$ job_NNS -17.52248   900
-544480         we_PRP urge_VBP you_PRP -17.02151  1573
-336198          our_PRP$ community_NNS -16.86139  3607
-498273          to_TO do_VB their_PRP$ -16.15634   877
-274223                keep_VB our_PRP$ -15.46073  1763
-341421 our_PRP$ first_JJ responder_NNS -15.30557   825
-345947               our_PRP$ local_JJ -13.62155  1083
-440557    the_DT resource_NNS they_PRP -13.51550  1062
-19728              ._. we_PRP urge_VBP -13.17478  1034
-341360               our_PRP$ first_JJ -13.17478  1034
+                      word      zeta count                          tagged
+486628           they need -25.54886  7637               they_PRP need_VBP
+486767        they need to -25.25659  4904         they_PRP need_VBP to_TO
+573543              you to -21.42313  4963                   you_PRP to_TO
+116945            do their -19.92709  1278                do_VB their_PRP$
+544397             we urge -19.56251  2459                 we_PRP urge_VBP
+515786            urge you -19.51734  2479                urge_VBP you_PRP
+515801         urge you to -19.42522  2409          urge_VBP you_PRP to_TO
+391480       resource they -17.90745  1570           resource_NNS they_PRP
+391493  resource they need -17.75050  1513  resource_NNS they_PRP need_VBP
+454493           their job -17.65629  1579              their_PRP$ job_NNS
+116960        do their job -17.52248   900        do_VB their_PRP$ job_NNS
+544480         we urge you -17.02151  1573         we_PRP urge_VBP you_PRP
+336198       our community -16.86139  3607          our_PRP$ community_NNS
+498273         to do their -16.15634   877          to_TO do_VB their_PRP$
+274223            keep our -15.46073  1763                keep_VB our_PRP$
+341421 our first responder -15.30557   825 our_PRP$ first_JJ responder_NNS
+345947           our local -13.62155  1083               our_PRP$ local_JJ
+440557   the resource they -13.51550  1062    the_DT resource_NNS they_PRP
+19728            . we urge -13.17478  1034             ._. we_PRP urge_VBP
+341360           our first -13.17478  1034               our_PRP$ first_JJ
 
 	REPS:
-                             word     zeta count
-357101       our_PRP$ veteran_NNS 11.77937  2474
-216299             i_PRP would_MD 11.81190  2122
-162666              he_PRP be_VBD 11.98088  2752
-569508           you_PRP have_VBP 12.62185  1840
-15563           ._. it_PRP be_VBZ 12.70900 10640
-209542             i_PRP have_VBP 12.84101  8747
-548036             what_WP we_PRP 13.02589  2002
-222508 in_IN its_PRP$ entirety_NN 13.44598   325
-258772       its_PRP$ entirety_NN 13.44598   325
-118174             do_VBP you_PRP 13.45659   489
-208270               i_PRP do_VBP 13.70312  1535
-332593          our_PRP$ ally_NNS 13.90350  1488
-315569             of_IN his_PRP$ 14.12086  3355
-169401             he_PRP say_VBD 14.36408  1383
-346939       our_PRP$ military_NN 14.90132   952
-566657             you_PRP be_VBP 15.38607  1992
-356308        our_PRP$ troops_NNS 15.63646   882
-214789            i_PRP think_VBP 18.73145  2370
-218014              if_IN you_PRP 21.09798  2190
-236350              it_PRP be_VBZ 22.60105 36528
+                  word     zeta count                     tagged
+357101     our veteran 11.77937  2474       our_PRP$ veteran_NNS
+216299         i would 11.81190  2122             i_PRP would_MD
+162666           he be 11.98088  2752              he_PRP be_VBD
+569508        you have 12.62185  1840           you_PRP have_VBP
+15563          . it be 12.70900 10640          ._. it_PRP be_VBZ
+209542          i have 12.84101  8747             i_PRP have_VBP
+548036         what we 13.02589  2002             what_WP we_PRP
+222508 in its entirety 13.44598   325 in_IN its_PRP$ entirety_NN
+258772    its entirety 13.44598   325       its_PRP$ entirety_NN
+118174          do you 13.45659   489             do_VBP you_PRP
+208270            i do 13.70312  1535               i_PRP do_VBP
+332593        our ally 13.90350  1488          our_PRP$ ally_NNS
+315569          of his 14.12086  3355             of_IN his_PRP$
+169401          he say 14.36408  1383             he_PRP say_VBD
+346939    our military 14.90132   952       our_PRP$ military_NN
+566657          you be 15.38607  1992             you_PRP be_VBP
+356308      our troops 15.63646   882        our_PRP$ troops_NNS
+214789         i think 18.73145  2370            i_PRP think_VBP
+218014          if you 21.09798  2190              if_IN you_PRP
+236350           it be 22.60105 36528              it_PRP be_VBZ
+
+
+**** SAMPLED NGRAM SUMMARIES ****
+	Counts:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    2.00     3.00     5.00    25.49    13.00 36528.00 
+
+	Zetas:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-25.5489  -0.5438   0.2067   0.1243   0.7533  22.6010 
+
+
+**** DROPPED NGRAM SUMMARIES ****
+	Counts:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  1.000   1.000   1.000   1.608   2.000  19.000 
+
+	Zetas:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-2.5330 -0.4303  0.2067  0.0595  0.4882  3.1231 
 null device 
           1 

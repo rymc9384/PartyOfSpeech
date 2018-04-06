@@ -1,6 +1,6 @@
 ## Author: Ryan McMahon
 ## Date Created: 12/07/2017
-## Date Last Modified: 03/27/2018
+## Date Last Modified: 03/28/2018
 ## File: "~/06-robustness/utils_fw.R"
 
 ## Purpose: 
@@ -9,7 +9,7 @@
 
 ## Edits:
 ##      03/27/18) Add plotting func w/o labeled points
-##      
+##      03/28/18) Make plotting regex conform to perl, drop remove call at top
 ##        
 
 ## Notes:
@@ -23,7 +23,7 @@
 
 ################################################################################
 
-rm(list = ls())
+#rm(list = ls())
 library(stringr)
 options(stringsAsFactors = F)
 
@@ -221,7 +221,7 @@ star <- function(words, zeta, zcut){
 
 
 ### Fightin Words plot w/o point labels and word class/group alignment indication:
-fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), classes=c("past", "future"), regexs=c("VB(D|N)","MD"), cols=c("#d7191c","#fdae61","#2b83ba","#99d594"), nwords=15, zcut=1.96, ylims=NULL, yspace=NULL, leg=NULL){
+fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), classes=c("past", "future"), regexs=c("VB(D|N)","MD"), cols=c("#d7191c","#fdae61","#2b83ba","#99d594"), nwords=15, zcut=1.96, ylims=NULL, yspace=NULL, ylabel=NULL, corpus=F, leg=NULL){
   
   ####
   ## ARGS:
@@ -243,6 +243,12 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
   #               otherwise colored according to group and class
   # ylims, (numeric, numeric): lower and upper bounds for plot (optional)
   # yspace, numeric: how far apart to place y-axis labels (optional)
+  # ylabel, expression *OR* str: y-axis title (optional)
+  # corpus, bool: is the model based on the full corpus (default=FALSE)
+  # leg, bool: if null (default), put in legend; else do not include legend
+  #
+  ####
+  
   
   # plot limits
   xlims <- c(-1, max(log(freq)) + 3)
@@ -254,7 +260,12 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
   # xaxis labels
   xat <- c(-1, log(1), log(100), log(1000), log(10000), log(100000))
   xtics <- c("", 1, 100, 1000, 10000, 100000)
-  xlab <- "Word Frequency in Topic"
+  if (corpus==F){
+    xlab <- "Word Frequency in Topic"
+  } else{
+    xlab <- "Word Frequency in Corpus"
+  }
+  
   
   # ylab labels
   if (is.null(yspace)){
@@ -269,8 +280,11 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
     yat <- seq(ylims[1], ylims[2], by=yspace)
   }
   
-  ylab <- expression(zeta[kw]^(R-D))
-  
+  if (is.null(ylabel)){
+    ylab <- expression(zeta[kw]^(R-D))
+  } else{
+    ylab <- ylabel
+  }
   # points to label
   tolab1 <- which(zeta %in% tail(sort(zeta), nwords) & zeta >= zcut)
   tolab2 <- which(zeta %in% head(sort(zeta), nwords) & zeta <= -zcut)
@@ -295,8 +309,8 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
   ylist2 <- cumsum(c(0, ylist2[-length(ylist2)]))
   
   # words coloring
-  class1 <- grepl(pattern = regexs[1], x = tagged)
-  class2 <- grepl(pattern = regexs[2], x = tagged)
+  class1 <- grepl(pattern = regexs[1], x = tagged, perl=T)
+  class2 <- grepl(pattern = regexs[2], x = tagged, perl=T)
   
   # label coloring
   wlist1.1 <- wlist1[which(class1[wlist1] == T)] # aligned class & group 1
@@ -333,11 +347,11 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
   
   points(log(freq[zeta >= zcut & class1 == T]), zeta[zeta >= zcut & class1 == T], pch=21, bg=cols[1], col=cols[1], cex=zeta[zeta >= zcut & class1 == T] / 2)
   points(log(freq[zeta >= zcut & class2 == T]), zeta[zeta >= zcut & class2 == T], pch=23, bg=cols[2], col=cols[2], cex=zeta[zeta >= zcut & class2 == T] / 2)
-  points(log(freq[zeta >= zcut & class1 == F & class2 == F]), zeta[zeta >= zcut & class1 == F & class2 == F], pch=21, cex=zeta[zeta >= zcut & class1 == F & class2 == F] / 2)
+  points(log(freq[zeta >= zcut & class1 == F & class2 == F]), zeta[zeta >= zcut & class1 == F & class2 == F], pch=22, bg="black", cex=zeta[zeta >= zcut & class1 == F & class2 == F] / 2)
   
   points(log(freq[zeta <= -zcut & class2 == T]), zeta[zeta <= -zcut & class2 == T], pch=21, bg=cols[3], col=cols[3], cex=abs(zeta[zeta <= -zcut & class2 == T]) / 2)
   points(log(freq[zeta <= -zcut & class1 == T]), zeta[zeta <= -zcut & class1 == T], pch=23, bg=cols[4], col=cols[4], cex=abs(zeta[zeta <= -zcut & class1 == T]) / 2)
-  points(log(freq[zeta <= -zcut & class1 == F & class2 == F]), zeta[zeta <= -zcut & class1 == F & class2 == F], pch=21, cex=zeta[zeta<= -zcut & class1 == F & class2 == F] / 2)
+  points(log(freq[zeta <= -zcut & class1 == F & class2 == F]), zeta[zeta <= -zcut & class1 == F & class2 == F], pch=22, bg="black", cex=abs(zeta[zeta<= -zcut & class1 == F & class2 == F]) / 2)
   
   # Group labels on right
   text(x = xlims[2], y = ylims[2], labels = groups[1], col = cols[1], cex = 3, pos = 2)
@@ -348,14 +362,18 @@ fw_nowords_plot <- function(words, tagged, zeta, freq, groups=c("GOP","DEM"), cl
     text(x = xlims[2], y = (0.25 + ylist1)[worder1.0], labels = words[wlist1.0], cex = zeta[wlist1.0] / 2.5, pos = 2)
   }
   text(x = xlims[2], y = (0.25 + ylist1)[worder1.1], labels = words[wlist1.1], cex = zeta[wlist1.1] / 2.5, col = cols[1], pos = 2)
-  text(x = xlims[2], y = (0.25 + ylist1)[worder1.2], labels = words[wlist1.2], cex = zeta[wlist1.2] / 2.5, col = cols[2], pos = 2)
+  if (length(wlist1.2) > 0){
+    text(x = xlims[2], y = (0.25 + ylist1)[worder1.2], labels = words[wlist1.2], cex = zeta[wlist1.2] / 2.5, col = cols[2], pos = 2)
+  }
+  
   
   if (length(wlist2.0) > 0){
     text(x = xlims[2], y = (ylims[1] + 1 + ylist2)[worder2.0], labels = words[wlist2.0], cex = abs(zeta[wlist2.0]) / 2.5, pos = 2)
   }
   text(x = xlims[2], y = (ylims[1] + 1 + ylist2)[worder2.1], labels = words[wlist2.1], cex = abs(zeta[wlist2.1]) / 2.5, col = cols[3], pos = 2)
-  text(x = xlims[2], y = (ylims[1] + 1 + ylist2)[worder2.2], labels = words[wlist2.2], cex = abs(zeta[wlist2.2]) / 2.5, col = cols[4], pos = 2)
-  
+  if (length(wlist2.2) > 0){
+    text(x = xlims[2], y = (ylims[1] + 1 + ylist2)[worder2.2], labels = words[wlist2.2], cex = abs(zeta[wlist2.2]) / 2.5, col = cols[4], pos = 2)
+  }
   
   if (is.null(leg)){
     legend("topleft", legend = c(paste(groups[1], classes[1]), 

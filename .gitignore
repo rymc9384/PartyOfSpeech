@@ -4,3 +4,6 @@
 02-pos_tagging/examples/
 02-pos_tagging/bilstm_char/data/
 02-pos_tagging/bilstm_char/results/
+05-analysis/.Rhistory
+*.ini
+06-robustness/03-exploratory/.Rhistory
