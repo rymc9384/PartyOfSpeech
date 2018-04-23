@@ -1,5 +1,6 @@
 ## RBM
 ## 04/02/2018
+## 04/17/2018
 
 rm(list=ls())
 options(stringsAsFactors = F)
@@ -99,13 +100,13 @@ df <- df[df$ntoks >= 25,]
 
 
 
-mod1 <- lmer(nouns1*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(ntoks/100) + (1|sen), data = df)
-mod2 <- lmer(nouns2*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(ntoks/100) + (1|sen), data = df)
-mod3 <- lmer(nouns3*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(ntoks/100) + (1|sen), data = df)
-mod4 <- lmer(nouns4*100 ~ ideology + gop * num_date + gop *I(num_date^2) + gop *I(num_date^3) + female + I(ntoks/100) + (1|sen), data = df)
+mod1 <- lmer(nouns1*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(log(ntoks)) + (1|sen), data = df)
+mod2 <- lmer(nouns2*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(log(ntoks)) + (1|sen), data = df)
+mod3 <- lmer(nouns3*100 ~ ideology + gop + num_date + I(num_date^2) + I(num_date^3) + female + I(log(ntoks)) + (1|sen), data = df)
+mod4 <- lmer(nouns4*100 ~ ideology + gop * num_date + gop *I(num_date^2) + gop *I(num_date^3) + female + I(log(ntoks)) + (1|sen), data = df)
 
 # plot diff over time for mod 4
-d <- sort(unique(df$date))
+d <- sort(unique(df$form_date))
 tmp <- seq(0, max(df$num_date), length.out = length(d))
-tmpyr <- tmp*(0.766039-0.398419) + (tmp^2)*(-0.220244+0.114657) + (tmp^3)*(0.017636-0.009149) - 0.460610 + 18.264472
-tmpyd <- tmp*0.766039 + (tmp^2)*-0.220244 + (tmp^3)*0.017636 + 18.264472
+tmpyr <- tmp*(0.774177-0.407896) + (tmp^2)*(-0.224777+0.118345) + (tmp^3)*(0.018128-0.0095) - 0.436777 + 16.432613
+tmpyd <- tmp*0.774177 + (tmp^2)*-0.224777 + (tmp^3)*0.018128 + 16.432613
